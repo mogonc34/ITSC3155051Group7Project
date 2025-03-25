@@ -1,0 +1,6 @@
+fastapi
+httpx
+pymysql
+SQLAlchemy
+pymysql
+uvicorn[standard]

@@ -1,0 +1,39 @@
+# Visual Studio specific files
+.vscode/
+.vs/
+.idea/
+
+#Package directories
+*.nuget/
+packages/
+
+# User-specific files
+*.rsuser
+*.suo
+*.User*.userosscache
+*.sln.docstates
+
+# Build results
+[Oo]bj/
+[Bb]in/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.ilk
+*.log
+*.obj
+*.tlb
+*.tmp
+*.vspscc
+*.vssscc
+
+# Backup & temporary files*_Backup*/
+*.bak
+*.swp
+*.tmp
+*.userprefs
+
+# Test results ???
+# [Tt]est[Rr]esult*/
+# [Bb]uild[Ll]og.*

@@ -1,6 +1,9 @@
+cryptography
 fastapi
 httpx
 pymysql
-SQLAlchemy
+sqlalchemy
 pymysql
+pytest
+pytest-mock
 uvicorn[standard]

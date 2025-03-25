@@ -40,3 +40,19 @@ The commit contains the following structural elements, to communicate intent to 
 	10. other types: are allowed, for example @commitlint/config-conventional (based on the Angular convention)
 		recommends chore:, ci:, and others.
 	11. footers other than BREAKING CHANGE: <description> may be provided and follow a convention similar to git trailer format.
+
+# from code skeleton
+
+### Installing necessary packages:  
+* `pip install fastapi`
+* `pip install "uvicorn[standard]"`  
+* `pip install sqlalchemy`  
+* `pip install pymysql`
+* `pip install pytest`
+* `pip install pytest-mock`
+* `pip install httpx`
+* `pip install cryptography`
+### Run the server:
+`uvicorn api.main:app --reload`
+### Test API by built-in docs:
+[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)

@@ -1,14 +1,14 @@
 /* General page styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #bdb7b7;
     margin: 0;
     padding: 0;
 }
 
 /* Header section styling */
 header {
-    background: #333;
+    background: #ad2626;
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -18,6 +18,7 @@ header {
 .team-logo {
     width: 150px; /* Adjust the size as needed */
     margin-top: 10px;
+    border-radius: 100px;
 }
 
 /* Menu button styling */
@@ -48,6 +49,55 @@ header nav {
     justify-content: space-between;
 }
 
+.vision-container {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    justify-items: center;
+    min-height: 250px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+  .vision-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.mission-statement, .team-rules {
+    text-align: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 80%;
+    border-radius: 8px;
+    height: auto;
+    min-height: 200px;
+    max-width: 100%;      /* Prevents it from overflowing */
+    word-wrap: break-word; /* Ensures long words break if needed */
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+}
+
+.mission-statement p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.team-rules ol {
+    text-align: left;
+    list-style-position: outside;
+    margin: 0 auto;
+    width: max-content;
+}
+
 /* Card styling for individual team bios */
 .card {
     background: white;
@@ -58,6 +108,20 @@ header nav {
     flex: 1 1 calc(30% - 40px);
     text-align: center;
     transition: transform 0.2s;
+}
+
+.adolfo {
+    background-color: royalblue;
+    color: white;
+    transition: color ease-in-out 0.2s;
+}
+
+.adolfo a:hover {
+    color: black;
+}
+
+img {
+    width: 30%;
 }
 
     .card:hover {
@@ -80,6 +144,11 @@ h2 {
     color: #555;
 }
 
+.moodBoard {
+    display: none;
+    margin-top: 10px;
+    color: #555;
+}
 /* Button styling */
 button {
     background: #007BFF;

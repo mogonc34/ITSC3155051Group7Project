@@ -11,9 +11,6 @@ function toggleBio(bioId) {
         bio.style.display = "none";
     }
 }
-
-function toggleMoodBoard(moodID) {
-    const moodBoard = document.getElementById(moodID);
     // Toggle between showing and hiding the bio section
     if (moodBoard.style.display === "none" || moodBoard.style.display === "") {
         moodBoard.style.display = "block";
@@ -38,6 +35,6 @@ function showSection(sectionId) {
     // Display the vision section and hide the bios section
     else if (sectionId === "vision") {
         biosSection.style.display = "none";
-        visionSection.style.display = "block";
+        visionSection.style.display = "grid";
     }
 }

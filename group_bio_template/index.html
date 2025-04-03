@@ -11,7 +11,7 @@
     <header>
         <h1>Meet Our Team</h1>
         <!-- Example team logo -->
-        <img src="img/team-logo.png" alt="Team Logo" class="team-logo">
+        <img src="./images/jamd-logo.png" alt="Team Logo" class="team-logo">
 
         <!-- Navigation menu to switch between sections -->
         <nav>
@@ -40,18 +40,44 @@
             <button onclick="toggleBio('bio2')">Show Bio</button>
             <p id="bio2" class="bio">Jane is a backend developer specializing in server-side logic and database management.</p>
         </div>
-        <div class="card">
-            <h2>Emily Johnson</h2>
-            <p>UI/UX Designer</p>
+        <div class="card adolfo">
+            <h2>Adolfo Martinez</h2>
+            <img src="./images/photo%20of%20me.jpg" alt="photo of me">
+            <p>Developer</p>
             <button onclick="toggleBio('bio3')">Show Bio</button>
-            <p id="bio3" class="bio">Emily is a UI/UX designer with a passion for creating user-friendly interfaces.</p>
+            <button onclick="toggleMoodboard('moodboard')">Show Moodboard</button>
+            <div class="moodBoard" id="moodboard">
+                <h3 class="adolfo">Moodboard</h3>
+                <p class="adolfo">My inspiration came from the love of frontend and signing up for an apprenticeship opportunity called RoadToHire.</p>
+                <img src="./images/cb88-java-logo-001.jpg" alt="java logo">
+                <p class="adolfo">My first programming language I got introduced to was java hence the image displayed.</p>
+                <a class="adolfo" target="_blank" href="https://github.com/adolfo117144">My GitHub</a>
+            </div>
+            <div id="bio3" class="bio">
+                <h3 class="adolfo">Bio</h3>
+                <p class="adolfo">Adolfo is a developer that is familiar with frontend and backend.</p>
+            </div>
         </div>
     </div>
 
     <!-- Team vision/mission statement section (hidden by default) -->
-    <div id="vision" class="container" style="display: none;">
-        <h2>Our Mission Statement</h2>
-        <p>We strive to create a collaborative, inclusive, and innovative environment where team members feel empowered to push boundaries and achieve excellence in their craft. Our mission is to deliver high-quality solutions that meet and exceed our clients' expectations.</p>
+    <div id="vision" class="vision-container" style="display: none;">
+        <div class="mission-statement">
+            <h2>Our Mission Statement</h2>
+            <p>We value teamwork, learning, and clear communication. Our goal is to finish the project and grow as computer science students.
+                We’re good at solving problems together and bringing different ideas.</p>
+        </div>
+        <div class="team-rules">
+            <h2>Team Rules</h2>
+            <ol>
+                <li>Respect each other</li>
+                <li>Be on time</li>
+                <li>Communicate clearly</li>
+                <li>Help each other</li>
+                <li>Share work fairly</li>
+                <li>Stay positive</li>
+            </ol>
+        </div>
     </div>
 
     <script src="script.js"></script> <!-- Link to external JavaScript file -->

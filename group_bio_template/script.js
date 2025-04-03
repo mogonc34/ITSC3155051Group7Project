@@ -11,7 +11,6 @@ function toggleBio(bioId) {
         bio.style.display = "none";
     }
 }
-
 function toggleMoodboard(moodboard) {
     const moodBoard = document.getElementById(moodboard);
     // Toggle between showing and hiding the bio section
@@ -22,10 +21,6 @@ function toggleMoodboard(moodboard) {
     }
 }
 
-/**
- * Shows the specified section ('bios' or 'vision') and hides the other
- * @param {string} sectionId - The ID of the section to display
- */
 function showSection(sectionId) {
     const biosSection = document.getElementById("bios");
     const visionSection = document.getElementById("vision");

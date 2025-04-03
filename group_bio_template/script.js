@@ -11,9 +11,6 @@ function toggleBio(bioId) {
         bio.style.display = "none";
     }
 }
-
-function toggleMoodboard(moodboard) {
-    const moodBoard = document.getElementById(moodboard);
     // Toggle between showing and hiding the bio section
     if (moodBoard.style.display === "none" || moodBoard.style.display === "") {
         moodBoard.style.display = "block";

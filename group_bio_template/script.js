@@ -11,6 +11,15 @@ function toggleBio(bioId) {
         bio.style.display = "none";
     }
 }
+
+function toggleMoodboard(moodboard) {
+    const bio = document.getElementById(moodboard);
+    // Toggle between showing and hiding the bio section
+    if (bio.style.display === "none" || bio.style.display === "") {
+        bio.style.display = "block";
+    } else {
+        bio.style.display = "none";
+
     // Toggle between showing and hiding the bio section
     if (moodBoard.style.display === "none" || moodBoard.style.display === "") {
         moodBoard.style.display = "block";

@@ -11,6 +11,15 @@ function toggleBio(bioId) {
         bio.style.display = "none";
     }
 }
+function toggleMoodBoard(moodBoardId) {
+    const moodBoard = document.getElementById(moodBoardId);
+    // Toggle between showing and hiding the bio section
+    if (moodBoard.style.display === "none" || moodBoard.style.display === "") {
+        moodBoard.style.display = "block";
+    } else {
+        moodBoard.style.display = "none";
+    }
+}
 
 /**
  * Shows the specified section ('bios' or 'vision') and hides the other
@@ -28,6 +37,6 @@ function showSection(sectionId) {
     // Display the vision section and hide the bios section
     else if (sectionId === "vision") {
         biosSection.style.display = "none";
-        visionSection.style.display = "block";
+        visionSection.style.display = "grid";
     }
 }

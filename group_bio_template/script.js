@@ -11,11 +11,14 @@ function toggleBio(bioId) {
         bio.style.display = "none";
     }
 }
-<<<<<<< HEAD
+
+
 function toggleMoodboard(moodboard) {
     const moodBoard = document.getElementById(moodboard);
-=======
->>>>>>> 65c136efd34c1d35ad876d3a023e406cb6e1e0bf
+
+
+function toggleMoodBoard(moodBoardId) {
+    const moodBoard = document.getElementById(moodBoardId);
     // Toggle between showing and hiding the bio section
     if (moodBoard.style.display === "none" || moodBoard.style.display === "") {
         moodBoard.style.display = "block";

@@ -11,7 +11,8 @@ function toggleBio(bioId) {
         bio.style.display = "none";
     }
 }
-
+function toggleMoodboard(moodboard) {
+    const moodBoard = document.getElementById(moodboard);
 
 function toggleMoodboard(moodboard) {
     const moodBoard = document.getElementById(moodboard);

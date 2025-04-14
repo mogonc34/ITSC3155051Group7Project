@@ -8,5 +8,4 @@ class RatingReview(Base):
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     rating = Column(Integer, nullable=False)
     review = Column(String(300))
-    customer_id = Column(Integer, ForeignKey("customers.id"))
-    sandwich_id = Column(Integer, ForeignKey("sandwiches.id"))
+    customer_id = Column(Integer, ForeignKey("customers.customer_id"))

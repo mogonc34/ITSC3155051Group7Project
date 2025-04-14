@@ -5,4 +5,4 @@ class OrderPromotionBase(BaseModel):
     promo_code: str
 
     class Config:
-        orm_mode = True
+        from_attributes = True

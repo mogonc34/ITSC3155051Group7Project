@@ -10,4 +10,4 @@ class IngredientResponse(IngredientBase):
     ingredient_id: int
 
     class Config:
-        orm_mode = True
+        from_attributes = True

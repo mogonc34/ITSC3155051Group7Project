@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Bio</title>
+    <title>Group-7 Bio</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
 </head>
 <body>
 
     <header>
-        <h1>Meet Our Team</h1>
+        <h1>Meet Group-7</h1>
         <!-- Example team logo -->
-        <img src="img/team-logo.png" alt="Team Logo" class="team-logo">
+        <img src="img/jamd-logo.png" alt="Team Logo" class="team-logo">
 
         <!-- Navigation menu to switch between sections -->
         <nav>
@@ -24,32 +24,75 @@
     <div id="bios" class="container">
         <!-- Each card represents an individual team member -->
         <div class="card">
-            <h2>John Doe</h2>
+            <h2>Jie Zhou</h2>
             <p>Frontend Developer</p>
             <button onclick="toggleBio('bio1')">Show Bio</button>
-            <p id="bio1" class="bio">John is a skilled frontend developer with 5 years of experience in creating responsive web applications.</p>
+            <p id="bio1" class="bio">Jie is a novice frontend developer and has experience with some languages</p>
+            <button onclick="toggleMoodBoard('mood_board')">Mood Board</button>
+            <p id="mood_board" class="moodBoard">
+                <a href="https://github.com/zhouj870"><img src="img/25231.png" alt="github" width="50" height="50"></a>
+                <br> Have fun with coding and learn new things from others.
+            </p>
         </div>
         <div class="card">
             <h2>David pruitt</h2>
-            <img src="./images/headshot.png" alt="">
+            <img src="img/headshot.png" alt="">
             <p>Team member</p>
             <button onclick="toggleBio('bio2')">Show Bio</button>
             <p id="bio2" class="bio">David is a compsci student </p>
-            <button onclick="toggleBio('moodboard')">Show MoodBoard</button>
-            <p id= "moodboard" class="moodboard"> My inspirations for computer science were purely money, i know computer sicentest make alot of money.  i have nof avorite tools,i mostly use vs code, i dont really think about computersience out side of school or as a job so i dont know any figures or think any concepts are mind blowing.   </p>
+            <button onclick="toggleMoodBoard('mood_board1')">Show MoodBoard</button>
+            <p id="mood_board1" class="moodBoard"> My inspirations for computer science were purely money, i know computer sicentest make alot of money.  i have nof avorite tools,i mostly use vs code, i dont really think about computersience out side of school or as a job so i dont know any figures or think any concepts are mind blowing.   </p>
+        </div>
+        <div class="card adolfo">
+            <h2>Adolfo Martinez</h2>
+            <img src="./img/photo%20of%20me.jpg" alt="photo of me">
+            <p>Developer</p>
+            <button onclick="toggleBio('bio3')">Show Bio</button>
+            <button onclick="toggleMoodBoard('moodboard')">Show Mood Board</button>
+            <div class="moodBoard" id="moodboard">
+                <h3 class="adolfo">Mood Board</h3>
+                <p class="adolfo">My inspiration came from the love of frontend and signing up for an apprenticeship opportunity called RoadToHire.</p>
+                <img src="img/cb88-java-logo-001.jpg" alt="java logo">
+                <p class="adolfo">My first programming language I got introduced to was java hence the image displayed.</p>
+                <a class="adolfo" target="_blank" href="https://github.com/adolfo117144">My GitHub</a>
+            </div>
+            <div id="bio3" class="bio">
+                <h3 class="adolfo">Bio</h3>
+                <p class="adolfo">Adolfo is a developer that is familiar with frontend and backend.</p>
+            </div>
         </div>
         <div class="card">
-            <h2>Emily Johnson</h2>
-            <p>UI/UX Designer</p>
-            <button onclick="toggleBio('bio3')">Show Bio</button>
-            <p id="bio3" class="bio">Emily is a UI/UX designer with a passion for creating user-friendly interfaces.</p>
+            <h2>Michael Goins</h2>
+            <img src="img/Bama-Duke Tailgate-2010Sep18.jpg" alt="M.Goins pic" class="team-logo">
+            <p>Team Member</p>
+            <button onclick="toggleBio('bio4')">Show Bio</button>
+            <p id="bio4" class="bio">Michael is an expienced technology delivery professional, expanding his knowledge & skills to include depth in the Software Engineering domain.</p>
+            <button onclick="toggleMoodBoard('mogomood')">Mood Board</button>
+            <p id="mogomood" class="moodBoard">
+                <img src="img/Clt Skyline-night.jpg" alt="Charlotte Skyline photo" width="10" height="150" />
+                <img src="img/ECDatHwy80nBRPSview-20211107.jpg" alt="bike at Hwy80 Overlook" width="10" height="150" />
+                <br> Former Marine, & returning non-Trad UNC-Charlotte student; shifting from Computer Engineering (1996) to Computer Science-Systems and Networks (2025) to put a UNC-Charlotte diploma on the wall once & for all.
+            </p>
         </div>
     </div>
 
     <!-- Team vision/mission statement section (hidden by default) -->
-    <div id="vision" class="container" style="display: none;">
-        <h2>Our Mission Statement</h2>
-        <p>We strive to create a collaborative, inclusive, and innovative environment where team members feel empowered to push boundaries and achieve excellence in their craft. Our mission is to deliver high-quality solutions that meet and exceed our clients' expectations.</p>
+    <div id="vision" class="vision-container" style="display: none;">
+        <div class="mission-statement">
+            <h2>Our Mission Statement</h2>
+            <p>We value teamwork, learning, and clear communication. Our goal is to finish the project and grow as computer science students.
+                We’re good at solving problems together and bringing different ideas.</p>
+        </div>
+        <div class="team-rules">
+            <h2>Team Rules</h2>
+            <ol>
+                <li>Commitment: Our team will remain committed to the project and deadlines</li>
+                <li>Courage: Our team will not be afraid to speak up and maybe do things differently.</li>
+                <li>Focus: Our team will remain focused on the project or topic at hand.</li>
+                <li>Openness: Our team will speak openly and share ideas that come to mind on how to better the project.</li>
+                <li>Respect: Our team will show basic respect to each other during the project.</li>
+            </ol>
+        </div>
     </div>
 
     <script src="script.js"></script> <!-- Link to external JavaScript file -->

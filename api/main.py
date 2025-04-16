@@ -3,9 +3,9 @@
 import uvicorn # from code skeleton
 from fastapi import Depends, FastAPI, HTTPException # from code skeleton
 from fastapi.middleware.cors import CORSMiddleware # from code skeleton
-from .routers import index as indexRoute # from code skeleton
-from .models import model_loader # from code skeleton
-from .dependencies.config import conf # from code skeleton
+# from api.routers import index as indexRoute
+from api.models import model_loader # from code skeleton
+from api.dependencies.config import conf # from code skeleton
 
 
 app = FastAPI()
@@ -21,7 +21,7 @@ app.add_middleware(
 )
 
 model_loader.index()
-indexRoute.load_routes(app)
+# indexRoute.load_routes(app)
 
 
 if __name__ == "__main__":

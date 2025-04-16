@@ -12,19 +12,22 @@ function toggleBio(bioId) {
     }
 }
 function toggleMoodboard(moodboard) {
-    const bio = document.getElementById(moodboard);
+    const moodBoard = document.getElementById(moodboard);
+
+function toggleMoodboard(moodboard) {
+    const moodBoard = document.getElementById(moodboard);
+
+
+function toggleMoodBoard(moodBoardId) {
+    const moodBoard = document.getElementById(moodBoardId);
     // Toggle between showing and hiding the bio section
-    if (bio.style.display === "none" || bio.style.display === "") {
-        bio.style.display = "block";
+    if (moodBoard.style.display === "none" || moodBoard.style.display === "") {
+        moodBoard.style.display = "block";
     } else {
-        bio.style.display = "none";
+        moodBoard.style.display = "none";
     }
 }
 
-/**
- * Shows the specified section ('bios' or 'vision') and hides the other
- * @param {string} sectionId - The ID of the section to display
- */
 function showSection(sectionId) {
     const biosSection = document.getElementById("bios");
     const visionSection = document.getElementById("vision");
@@ -37,6 +40,6 @@ function showSection(sectionId) {
     // Display the vision section and hide the bios section
     else if (sectionId === "vision") {
         biosSection.style.display = "none";
-        visionSection.style.display = "block";
+        visionSection.style.display = "grid";
     }
 }

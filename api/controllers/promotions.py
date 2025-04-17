@@ -73,6 +73,7 @@ def delete(db: Session, promo_id: int):
         error = str(e.__dict__['orig'])
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
 
+# The 66-lines of code below this line are the original skeleton code provided by @samfallahian for the course project
 # from sqlalchemy.orm import Session
 # from fastapi import HTTPException, status, Response, Depends
 # from ..models import promotions as model

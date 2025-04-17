@@ -84,6 +84,36 @@ def test_post_order_endpoint(db_session, mocker):
         "id": 1, "customer_name": "John Doe", "description": "Order for Test"
     }
 
+# Test the Review (GET) endpoint for orders
+
+
+def test_review_order_endpoint(db_session, mocker):
+    # Mock the controller's read_one method
+    mocker.patch("controllers.orders.read_one", return_value=model.Order(
+        id=1, customer_name="John Doe", description="Order for Test"))
+    # Send a GET request to the endpoint
+    response = client.get("/orders/1")
+    # Assertions
+    assert response.status_code == 200
+    assert response.json() == {
+        "id": 1, "customer_name": "John Doe", "description": "Order for Test"
+    }
+
+# Test the Clear Cart (DELETE) endpoint for orders
+
+
+def test_delete_order_endpoint(db_session, mocker):
+    # Mock the controller's delete method
+    mocker.patch("controllers.orders.delete", return_value=None)
+
+    # Send a DELETE request to the endpoint
+    response = client.delete("/orders/1")
+
+    # Assertions
+    assert response.status_code == 204
+    assert response.content == b""
+
+
 # The following 32-lines are the original skeleton code provided for the course project
 # from fastapi.testclient import TestClient
 # from ..controllers import orders as controller

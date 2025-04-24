@@ -85,8 +85,6 @@ def test_post_order_endpoint(db_session, mocker):
     }
 
 # Test the Review (GET) endpoint for orders
-
-
 def test_review_order_endpoint(db_session, mocker):
     # Mock the controller's read_one method
     mocker.patch("controllers.orders.read_one", return_value=model.Order(
@@ -99,7 +97,35 @@ def test_review_order_endpoint(db_session, mocker):
         "id": 1, "customer_name": "John Doe", "description": "Order for Test"
     }
 
+# Update an order (PUT) endpoint
+def test_update_order(db_session, mocker):
+    # Mock the controller's update method
+    mocker.patch("controllers.orders.update", return_value=model.Order(
+        id=1, customer_name="John Doe", description="Updated Order Description"))
+
+    # Send a PUT request to the endpoint
+    response = client.put("/orders/1", json={
+        "customer_name": "John Doe",
+        "description": "Updated Order Description"
+    })
+
+    # Assertions
+    assert response.status_code == 200
+    assert response.json() == {
+        "id": 1, "customer_name": "John Doe", "description": "Updated Order Description"
+    }
+
 # Test the Clear Cart (DELETE) endpoint for orders
+def test_clear_cart_endpoint(db_session, mocker):
+    # Mock the controller's read method
+    mocker.patch("controllers.orders.read", return_value=[model.Order(
+        id=1, customer_name="John Doe", description="Order for Test")])
+    # Send a DELETE request to the endpoint
+    response = client.delete("/orders/clear_cart")
+    # Assertions
+    assert response.status_code == 204
+    assert response.content == b""
+
 
 
 def test_delete_order_endpoint(db_session, mocker):

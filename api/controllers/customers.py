@@ -2,8 +2,8 @@ from sqlalchemy import Session
 from fastapi import HTTPException, status, Response
 from sqlalchemy.exc import SQLAlchemyError
 
-from ..models import customers as model
-from ..schemas import customers as schema
+from ..models import customer as model
+from ..schemas import customer as schema
 
 
 def create(db: Session, request: schema.CustomerCreate):

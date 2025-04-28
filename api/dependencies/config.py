@@ -6,6 +6,6 @@ class conf:
     db_name = "onlinerestaurantordersys_db"
     db_port = 3306
     db_user = "root"  # Replace with your MySQL (localhost) user, if different
-    db_password = "Cheesecake#11714"  # Replace with your MySQL (localhost) password
+    db_password = "password"  # Replace with your MySQL (localhost) password
     app_host = "localhost"  # Replace with your MySQL local host name, if different
     app_port = 8000

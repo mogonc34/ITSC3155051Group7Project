@@ -11,7 +11,6 @@ def create(db: Session, request: schema.PaymentBase):
         payment_type=request.payment_type,
         card_last_four=request.card_last_four,
         transaction_status=request.transaction_status or "success"
-        # transaction_date is auto-filled by database with server_default=func.now()
     )
 
     try:

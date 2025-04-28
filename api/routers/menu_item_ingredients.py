@@ -18,14 +18,14 @@ def create_ingredient_link(request: schema.MenuItemIngredientCreate, db: Session
 def get_all_ingredient_links(db: Session = Depends(get_db)):
     return controller.read_all(db)
 
-@router.get("/{item_id}", response_model=schema.MenuItemIngredient)
-def get_ingredient_link(item_id: int, db: Session = Depends(get_db)):
-    return controller.read_one(db, item_id)
+@router.get("/{menu_item_id}/{ingredient_id}", response_model=schema.MenuItemIngredient)
+def get_ingredient_link(menu_item_id: int, ingredient_id: int, db: Session = Depends(get_db)):
+    return controller.read_one(db, menu_item_id, ingredient_id)
 
-@router.put("/{item_id}", response_model=schema.MenuItemIngredient)
-def update_ingredient_link(item_id: int, request: schema.MenuItemIngredientUpdate, db: Session = Depends(get_db)):
-    return controller.update(db, item_id, request)
+@router.put("/{menu_item_id}/{ingredient_id}", response_model=schema.MenuItemIngredient)
+def update_ingredient_link(menu_item_id: int, ingredient_id: int, request: schema.MenuItemIngredientUpdate, db: Session = Depends(get_db)):
+    return controller.update(db, menu_item_id, ingredient_id, request)
 
-@router.delete("/{item_id}", status_code=status.HTTP_204_NO_CONTENT)
-def delete_ingredient_link(item_id: int, db: Session = Depends(get_db)):
-    return controller.delete(db, item_id)
+@router.delete("/{menu_item_id}/{ingredient_id}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_ingredient_link(menu_item_id: int, ingredient_id: int, db: Session = Depends(get_db)):
+    return controller.delete(db, menu_item_id, ingredient_id)

@@ -11,6 +11,11 @@ class OrderBase(BaseModel):
 class OrderCreate(OrderBase):
     pass
 
+class OrderUpdate(BaseModel):
+    payment_id: Optional[int] = None
+    order_status: Optional[str] = None
+    total_price: Optional[float] = None
+
 class OrderResponse(OrderBase):
     order_id: int
     order_date: Optional[datetime] = None

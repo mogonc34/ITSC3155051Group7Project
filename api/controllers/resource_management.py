@@ -1,35 +1,34 @@
 from sqlalchemy.orm import Session
 from fastapi import HTTPException, status, Response, Depends
-from ..models import ingredient as model
+from ..models import resource_management as model
 from sqlalchemy.exc import SQLAlchemyError
 
 def create(db: Session, request):
-    new_item = model.Ingredient(
-        ingredient_id=request.ingredient_id,
-        name=request.ingredient_name,
-        unit=request.ingredient_unit,
-        quantity_available=request.quantity.available,
+    new_resource = model.ResourceManagement(
+        ingredient=request.ingredient,
+        amount = request.amount,
+        unit = request.unit
     )
 
     try:
-        db.add(new_item)
+        db.add(new_resource)
         db.commit()
     except SQLAlchemyError as e:
         error = str(e.__dict__['orig'])
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
-    return new_item
+    return new_resource
 
 def read_all(db: Session):
     try:
-        result = db.query(model.MenuItem).all()
+        result = db.query(model.ResourceManagement).all()
     except SQLAlchemyError as e:
         error = str(e.__dict__['orig'])
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
     return result
 
-def read_one(db: Session, item_id):
+def read_one(db: Session, new_resource):
     try:
-        item = db.query(model.Ingredient).filter(model.Ingredient.id == item_id).first()
+        item = db.query(model.ResourceManagement).filter(model.ResourceManagement.id == new_resource).first()
         if not item:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Id not found!")
     except SQLAlchemyError as e:
@@ -37,9 +36,9 @@ def read_one(db: Session, item_id):
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
     return item
 
-def update(db: Session, item_id, request):
+def update(db: Session, new_resource, request):
     try:
-        item = db.query(model.Ingredient).filter(model.Ingredient.id == item_id)
+        item = db.query(model.ResourceManagement).filter(model.ResourceManagement.id == new_resource).first()
         if not item.first():
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Id not found!")
         update_data = request.dict(exclude_unset=True)
@@ -51,9 +50,9 @@ def update(db: Session, item_id, request):
     return item.first()
 
 
-def delete(db: Session, item_id):
+def delete(db: Session, new_resource):
     try:
-        item = db.query(model.Ingredient).filter(model.Ingredient.id == item_id)
+        item = db.query(model.ResourceManagement).filter(model.ResourceManagement.id == new_resource)
         if not item.first():
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Id not found!")
         item.delete(synchronize_session=False)

@@ -8,8 +8,10 @@ from ..schemas import promotions as schema
 
 def create(db: Session, request: schema.PromotionCreate):
     new_promo = model.Promotion(
-        code=request.code,
-        expiration_date=request.expiration_date
+        promotion_name=request.promotion_name,
+        promotion_description=request.promotion_description,
+        promotion_end_date=request.promotion_end_date,
+        promotion_start_date=request.promotion_start_date
     )
 
     try:

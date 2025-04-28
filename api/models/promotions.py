@@ -1,12 +1,14 @@
-from sqlalchemy import Column, ForeignKey, Integer, String, DECIMAL, DATETIME
-from sqlalchemy.orm import relationship
-from datetime import datetime
+from sqlalchemy import Column, String, Text, DECIMAL, Date, CheckConstraint
 from ..dependencies.database import Base
 
 class Promotion(Base):
-    __tablename__ = "promotions"
-    id = Column(Integer, primary_key=True, index=True, autoincrement=True)
-    promotion_name = Column(String(100))
-    promotion_description = Column(String(300))
-    promotion_start_date = Column(DATETIME, nullable=False, server_default=str(datetime.now()))
-    promotion_end_date = Column(DATETIME, nullable=False, server_default=str(datetime.now()))
+    __tablename__ = 'promotions'
+
+    promo_code = Column(String(20), primary_key=True)
+    description = Column(Text)
+    discount_percent = Column(DECIMAL(5, 2), nullable=False)
+    expiration_date = Column(Date)
+
+    __table_args__ = (
+        CheckConstraint('discount_percent >= 0 AND discount_percent <= 100', name='check_discount_percent_range'),
+    )

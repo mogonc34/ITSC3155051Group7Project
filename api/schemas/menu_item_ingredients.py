@@ -1,19 +1,16 @@
 from pydantic import BaseModel
 from typing import Optional
 
+class IngredientBase(BaseModel):
+    name: str
+    unit: Optional[str] = None
+    quantity_available: Optional[float] = None
 
-class MenuItemIngredientBase(BaseModel):
-    menu_item_id: int
-    ingredient_id: int
-    amount: float
-
-
-class MenuItemIngredientCreate(MenuItemIngredientBase):
+class IngredientCreate(IngredientBase):
     pass
 
-
-class MenuItemIngredient(MenuItemIngredientBase):
-    id: int
+class IngredientResponse(IngredientBase):
+    ingredient_id: int
 
     class Config:
         from_attributes = True

@@ -1,21 +1,17 @@
-from pydantic import BaseModel
-from datetime import datetime
+from pydantic import BaseModel, condecimal
 from typing import Optional
-
+from datetime import date
 
 class PromotionBase(BaseModel):
-    promotion_name: str
-    promotion_description: str
-    promotion_start_date: datetime
-    promotion_end_date: datetime
-
+    description: Optional[str] = None
+    discount_percent: condecimal(ge=0, le=100, max_digits=5, decimal_places=2)
+    expiration_date: Optional[date] = None
 
 class PromotionCreate(PromotionBase):
-    pass
+    promo_code: str  # promo_code is required when creating
 
-
-class Promotion(PromotionBase):
-    id: int
+class PromotionResponse(PromotionBase):
+    promo_code: str
 
     class Config:
         from_attributes = True

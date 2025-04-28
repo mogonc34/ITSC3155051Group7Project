@@ -10,22 +10,22 @@ router = APIRouter(
     tags=["Orders"]
 )
 
-@router.post("/", response_model=schema.Order, status_code=status.HTTP_201_CREATED)
+@router.post("/", response_model=schema.OrderResponse, status_code=status.HTTP_201_CREATED)
 def create_order(request: schema.OrderCreate, db: Session = Depends(get_db)):
     return controller.create(db, request)
 
-@router.get("/", response_model=list[schema.Order])
+@router.get("/", response_model=list[schema.OrderResponse])
 def get_all_orders(db: Session = Depends(get_db)):
     return controller.read_all(db)
 
-@router.get("/{item_id}", response_model=schema.Order)
-def get_order(item_id: int, db: Session = Depends(get_db)):
-    return controller.read_one(db, item_id)
+@router.get("/{order_id}", response_model=schema.OrderResponse)
+def get_order(order_id: int, db: Session = Depends(get_db)):
+    return controller.read_one(db, order_id)
 
-@router.put("/{item_id}", response_model=schema.Order)
-def update_order(item_id: int, request: schema.OrderUpdate, db: Session = Depends(get_db)):
-    return controller.update(db, item_id, request)
+@router.put("/{order_id}", response_model=schema.OrderResponse)
+def update_order(order_id: int, request: schema.OrderUpdate, db: Session = Depends(get_db)):
+    return controller.update(db, order_id, request)
 
-@router.delete("/{item_id}", status_code=status.HTTP_204_NO_CONTENT)
-def delete_order(item_id: int, db: Session = Depends(get_db)):
-    return controller.delete(db, item_id)
+@router.delete("/{order_id}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_order(order_id: int, db: Session = Depends(get_db)):
+    return controller.delete(db, order_id)

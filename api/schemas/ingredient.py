@@ -9,6 +9,11 @@ class IngredientBase(BaseModel):
 class IngredientCreate(IngredientBase):
     pass
 
+class IngredientUpdate(BaseModel):
+    name: Optional[str] = None
+    unit: Optional[str] = None
+    quantity_available: Optional[float] = None
+
 class IngredientResponse(IngredientBase):
     ingredient_id: int
 

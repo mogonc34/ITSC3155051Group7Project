@@ -1,4 +1,4 @@
-from sqlalchemy import Session
+from sqlalchemy.orm import Session
 from fastapi import HTTPException, status, Response
 from sqlalchemy.exc import SQLAlchemyError
 
@@ -55,15 +55,18 @@ def update(db: Session, customer_id: int, request: schema.CustomerUpdate):
         error = str(e.__dict__['orig'])
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
 
+
 def delete(db: Session, customer_id: int):
     try:
         customer = db.query(model.Customer).filter(model.Customer.customer_id == customer_id).first()
         if not customer:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Customer ID not found!")
-        customer.delete(synchronize_session=False)
+
+        db.delete(customer)  # Correct way to delete an object
         db.commit()
         return Response(status_code=status.HTTP_204_NO_CONTENT)
     except SQLAlchemyError as e:
         db.rollback()
         error = str(e.__dict__['orig'])
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
+

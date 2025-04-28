@@ -57,8 +57,8 @@ def update(db: Session, customer_id: int, request: schema.CustomerUpdate):
 
 def delete(db: Session, customer_id: int):
     try:
-        customer = db.query(model.Customer).filter(model.Customer.customer_id == customer_id)
-        if not customer.first():
+        customer = db.query(model.Customer).filter(model.Customer.customer_id == customer_id).first()
+        if not customer:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Customer ID not found!")
         customer.delete(synchronize_session=False)
         db.commit()

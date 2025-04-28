@@ -10,4 +10,4 @@ class Payment(Base):
     payment_type = Column(String(50))
     card_last_four = Column(String(4))
     transaction_status = Column(String(50))
-    transaction_date = Column(TIMESTAMP, server_default=func.now())  # Fix: now default current time
+    transaction_date = Column(TIMESTAMP, server_default=func.now())

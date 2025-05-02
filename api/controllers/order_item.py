@@ -1,9 +1,14 @@
 from sqlalchemy.orm import Session
 from fastapi import HTTPException, status, Response
 from sqlalchemy.exc import SQLAlchemyError
+from decimal import Decimal
 
 from ..models import order_item as model
+from ..models import menu_item_ingredients as mii_model
+from ..models import ingredient as ingredient_model
 from ..schemas import order_item as schema
+
+
 
 def create(db: Session, request: schema.OrderItemCreate):
     new_order_item = model.OrderItem(
@@ -13,7 +18,24 @@ def create(db: Session, request: schema.OrderItemCreate):
         item_price=request.item_price
     )
     try:
+        ingredients_required = db.query(mii_model.MenuItemIngredient).filter_by(menu_item_id=request.menu_item_id).all()
+
+        for req in ingredients_required:
+            ingredient = db.query(ingredient_model.Ingredient).filter_by(ingredient_id=req.ingredient_id).first()
+
+            total_needed = Decimal(req.quantity_required) * Decimal(request.quantity)
+            available = Decimal(ingredient.quantity_available)
+
+            if available < total_needed:
+                raise HTTPException(
+                    status_code=400,
+                    detail=f"Not enough {ingredient.name}: required {total_needed}, available {available}"
+                )
         db.add(new_order_item)
+        for req in ingredients_required:
+            ingredient = db.query(ingredient_model.Ingredient).filter_by(ingredient_id=req.ingredient_id).first()
+            total_needed = req.quantity_required * request.quantity
+            ingredient.quantity_available -= total_needed
         db.commit()
         db.refresh(new_order_item)
         return new_order_item

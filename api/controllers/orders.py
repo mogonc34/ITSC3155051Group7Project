@@ -1,16 +1,53 @@
-from sqlalchemy.orm import Session
 from fastapi import HTTPException, status, Response
+from sqlalchemy.orm import Session
+import uuid
+from fastapi import HTTPException
+from sqlalchemy import func
+from datetime import date
 from sqlalchemy.exc import SQLAlchemyError
 
 from ..models import order as model
 from ..schemas import order as schema
 
+def get_by_tracking_number(db: Session, tracking_number: str):
+    try:
+        order = db.query(model.Order).filter(model.Order.tracking_number == tracking_number).first()
+        if not order:
+            raise HTTPException(status_code=404, detail="Tracking number not found.")
+        return order
+    except SQLAlchemyError as e:
+        raise HTTPException(status_code=500, detail=str(e.__dict__.get("orig", e)))
+
+def get_revenue_by_date(db: Session, target_date: date):
+    try:
+        revenue = db.query(func.sum(model.Order.total_price)) \
+            .filter(func.date(model.Order.order_date) == target_date) \
+            .scalar()
+
+        return {"date": target_date, "total_revenue": revenue or 0.00}
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+def get_orders_by_date_range(db: Session, start_date: date, end_date: date):
+    try:
+        return db.query(model.Order)\
+            .filter(model.Order.order_date >= start_date)\
+            .filter(model.Order.order_date <= end_date)\
+            .all()
+    except SQLAlchemyError as e:
+        raise HTTPException(status_code=500, detail=str(e.__dict__.get("orig", str(e))))
+
+
 def create(db: Session, request: schema.OrderCreate):
+    tracking_number = str(uuid.uuid4()).replace("-", "")[:12]  # or your custom logic
     new_order = model.Order(
         customer_id=request.customer_id,
         payment_id=request.payment_id,
         order_status="Processing",
-        total_price=request.total_price
+        total_price=request.total_price,
+        tracking_number=tracking_number,
+        order_type=request.order_type
     )
     try:
         db.add(new_order)

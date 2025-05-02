@@ -10,4 +10,7 @@ class Order(Base):
     payment_id = Column(Integer, ForeignKey('payments.payment_id'))
     order_date = Column(TIMESTAMP, server_default=func.now())
     order_status = Column(String(50))
+    tracking_number = Column(String(50), unique=True, nullable=False)
     total_price = Column(DECIMAL(10, 2))
+    order_type = Column(String(20), nullable=False)
+

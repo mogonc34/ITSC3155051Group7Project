@@ -1,29 +1,19 @@
-﻿# Credit starting point to the fastapi/full-stack-fastapi-template in fastapi repository.
+﻿## ITSC-3155 Section 051 Group-7 Final Project Technology Stack & Uses
 
-
-<a href="https://github.com/fastapi/full-stack-fastapi-template/actions?query=workflow%3ATest" target="_blank"><img src="https://github.com/fastapi/full-stack-fastapi-template/workflows/Test/badge.svg" alt="Test"></a>
-<a href="https://coverage-badge.samuelcolvin.workers.dev/redirect/fastapi/full-stack-fastapi-template" target="_blank"><img src="https://coverage-badge.samuelcolvin.workers.dev/fastapi/full-stack-fastapi-template.svg" alt="Coverage"></a>
-
-## Project Technology Stack + Features
+[Meet Group-7](https://raw.githubusercontent.com/mogonc34/ITSC3155051Group7Project/refs/heads/main/group_bio_template/index.html?token=GHSAT0AAAAAADCZBW5E24JYHPUNDRTD3M462AUATRA)
 
 - ⚡ [**FastAPI**](https://fastapi.tiangolo.com) for the Python backend API.
     - 🧰 [SQLModel](https://sqlmodel.tiangolo.com) for the Python SQL database interactions (ORM).
     - 🔍 [Pydantic](https://docs.pydantic.dev), used by FastAPI, for the data validation and settings management.
     - 💾 [MySQL (Community) and MySQL Workbench](https://www.mysql.com) as the MySQL database.
-- 🚀 [React](https://react.dev) for the frontend.
-    - 💃 Using TypeScript, hooks, Vite, and other parts of a modern frontend stack.
-    - 🎨 [Chakra UI](https://chakra-ui.com) for the frontend components.
+- 🚀 [SwaggerUI](https://swagger.io/tools/swagger-ui/) for user interaction (no frontend requirement).
+    - 💃 [Uvicorn](https://uvicorn.org), web server for SwaggerUI.
     - 🤖 An automatically generated frontend client.
     - 🧪 [Playwright](https://playwright.dev) for End-to-End testing.
     - 🦇 Dark mode support.
-- 🐋 [Docker Compose](https://www.docker.com) for development and production.
-- 🔒 Secure password hashing by default.
-- 🔑 JWT (JSON Web Token) authentication.
-- 📫 Email based password recovery.
+- 🐋 [PyCharm](https://www.jetbrains.com/pycharm/) for development .
 - ✅ Tests with [Pytest](https://pytest.org).
-- 📞 [Traefik](https://traefik.io) as a reverse proxy / load balancer.
-- 🚢 Deployment instructions using Docker Compose, including how to set up a frontend Traefik proxy to handle automatic HTTPS certificates.
-- 🏭 CI (continuous integration) and CD (continuous deployment) based on GitHub Actions.
+- 📦 [GitHub](https://www.github.com) for collaborative development and version control.
 
 ### Dashboard Login
 

@@ -1,12 +1,14 @@
 ﻿Copied this from FastAPI Project - Frontend
 
-# FastAPI Project - Frontend
+# ITSC-3155 Section-051 Group-7 Final Project Documentatoin - User Manual
 
-The frontend is built with [Vite](https://vitejs.dev/), [React](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/), [TanStack Query](https://tanstack.com/query), [TanStack Router](https://tanstack.com/router) and [Chakra UI](https://chakra-ui.com/).
+Due to project timelines, no frontend build was required.  Instead [Uvicorn](https://uvicorn.org), an ASGI web server implementation for Python, has been 
+used in conjunction with [SwaggerUI](https://swagger.io/tools/swagger-ui/) is substituted for scaled-down frontend Interactions.
 
-## Frontend development
+## Project Implementation
 
-Before you begin, ensure that you have either the Node Version Manager (nvm) or Fast Node Manager (fnm) installed on your system.
+Before you begin, you will need to install:
+	ensure that you have either the Node Version Manager (nvm) or Fast Node Manager (fnm) installed on your system.
 
 * To install fnm follow the [official fnm guide](https://github.com/Schniz/fnm#installation). If you prefer nvm, you can install it using the [official nvm guide](https://github.com/nvm-sh/nvm#installing-and-updating).
 

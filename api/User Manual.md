@@ -8,19 +8,19 @@ used in conjunction with [SwaggerUI](https://swagger.io/tools/swagger-ui/) is su
 ## Project Implementation
 
 Before you begin, you will need to install:
-	[PyCharm](https://www.jetbrains.com/pycharm/) (or other Python IDE)
-	[MySQL (Community) and MySQL Workbench](https://www.mysql.com) (or other SQL database client)
-	[Pydantic](https://docs.pydantic.dev) (or other data validation library)
-	[SQLAlchemy](https://www.sqlalchemy.org/) (or other ORM)
-	[SQLModel](https://sqlmodel.tiangolo.com) (or other SQL database interactions)
-	[FastAPI](https://fastapi.tiangolo.com) (or other Python web framework)
-	pymysql (or other MySQL driver)
-	cryptography (or other encryption library)
-	httpx (or other HTTP client)
-	MagicMock (or other mocking library)
-	[Pytest](https://pytest.org) (or other testing framework)
-	[SwaggerUI](https://swagger.io/tools/swagger-ui/) (or other API documentation tool)
-	[Uvicorn](https://uvicorn.org) (or other ASGI web server)
+	- [PyCharm](https://www.jetbrains.com/pycharm/) (or other Python IDE)
+	- [MySQL (Community) and MySQL Workbench](https://www.mysql.com) (or other SQL database client)
+	- [Pydantic](https://docs.pydantic.dev) (or other data validation library)
+	- [SQLAlchemy](https://www.sqlalchemy.org/) (or other ORM)
+	- [SQLModel](https://sqlmodel.tiangolo.com) (or other SQL database interactions)
+	- [FastAPI](https://fastapi.tiangolo.com) (or other Python web framework)
+	- pymysql (or other MySQL driver)
+	- cryptography (or other encryption library)
+	- httpx (or other HTTP client)
+	- MagicMock (or other mocking library)
+	- [Pytest](https://pytest.org) (or other testing framework)
+	- [SwaggerUI](https://swagger.io/tools/swagger-ui/) (or other API documentation tool)
+	- [Uvicorn](https://uvicorn.org) (or other ASGI web server)
 
 
 * To install fnm follow the [official fnm guide](https://github.com/Schniz/fnm#installation). If you prefer nvm, you can install it using the [official nvm guide](https://github.com/nvm-sh/nvm#installing-and-updating).

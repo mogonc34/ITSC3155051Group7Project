@@ -1,7 +1,6 @@
-# ITSC3155051Group7Project
-Repository for ITSC-3155-051 Group-7 Final Project
+# ITSC-3155-051 Group-7 Final Project Repository (ITSC3155051Group7Project)
 
-The ITSC3155_Assignments Repository is currently shared with:
+This GitHub Repository is currently shared (Collaborators) with:
 
 	Group 7 Members:
 		Adolfo Martinex (amart268@charlotte.edu), GitHub = adolfo117144

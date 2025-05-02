@@ -1,6 +1,6 @@
 ﻿Copied this from FastAPI Project - Frontend
 
-# ITSC-3155 Section-051 Group-7 Final Project Documentatoin - User Manual
+# ITSC-3155 Section-051 Group-7 Final Project User Manual
 
 Due to project timelines, no frontend build was required.  Instead [Uvicorn](https://uvicorn.org), an ASGI web server implementation for Python, has been 
 used in conjunction with [SwaggerUI](https://swagger.io/tools/swagger-ui/) is substituted for scaled-down frontend Interactions.
@@ -8,7 +8,16 @@ used in conjunction with [SwaggerUI](https://swagger.io/tools/swagger-ui/) is su
 ## Project Implementation
 
 Before you begin, you will need to install:
-	ensure that you have either the Node Version Manager (nvm) or Fast Node Manager (fnm) installed on your system.
+	[PyCharm](https://www.jetbrains.com/pycharm/) (or other Python IDE)
+	[MySQL (Community) and MySQL Workbench](https://www.mysql.com) (or other SQL database client)
+	SQLAlchemy (or other ORM)
+	SQLModel (or other ORM)
+	[Pydantic](https://docs.pydantic.dev) (or other data validation library)
+	[Pytest](https://pytest.org) (or other testing framework)
+	[SwaggerUI](https://swagger.io/tools/swagger-ui/) (or other API documentation tool)
+	[Uvicorn](https://uvicorn.org) (or other ASGI web server)
+	MagicMock (or other mocking library)
+
 
 * To install fnm follow the [official fnm guide](https://github.com/Schniz/fnm#installation). If you prefer nvm, you can install it using the [official nvm guide](https://github.com/nvm-sh/nvm#installing-and-updating).
 

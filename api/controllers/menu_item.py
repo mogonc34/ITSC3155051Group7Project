@@ -4,6 +4,14 @@ from ..models import menu_item as model
 from ..schemas import menu_item as schema
 from sqlalchemy.exc import SQLAlchemyError
 
+def get_by_food_category(db: Session, category: str):
+    try:
+        items = db.query(model.MenuItem).filter(model.MenuItem.food_category == category).all()
+        if not items:
+            raise HTTPException(status_code=404, detail="No items found in this food category.")
+        return items
+    except SQLAlchemyError as e:
+        raise HTTPException(status_code=500, detail=str(e.__dict__.get("orig", e)))
 
 def create(db: Session, request: schema.MenuItemCreate):
     new_item = model.MenuItem(

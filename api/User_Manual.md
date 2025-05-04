@@ -77,7 +77,7 @@ Open MySQL Workbench and create a new database named `onlinerestaurantordersys_d
 	```python
 	DATABASE_URL = "mysql+pymysql://username:password@localhost/onlinerestaurantordersys_db"
 	```
-[!Group7 OROS Docs(api/images/MySQL_db_structure.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS docs](api/images/MySQL_db_structure.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 
 
 ## 6. Running the Project
@@ -91,7 +91,7 @@ Open MySQL Workbench and create a new database named `onlinerestaurantordersys_d
 - **PUT**: Update existing records in the database.
 - **DELETE**: Remove records from the database.
 ### 6.4. Use the API endpoints to perform CRUD operations:
-[!API docs(api/images/Group7_OROS_SwaggerUI_Screen1.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
-[!API docs(api/images/Group7_OROS_SwaggerUI_Screen2.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
-[!API docs(api/images/Group7_OROS_SwaggerUI_Screen3.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
-[!API docs(api/images/Group7_OROS_SwaggerUI_Screen4.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS docs](api/images/Group7_OROS_SwaggerUI_Screen1.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS docs](api/images/Group7_OROS_SwaggerUI_Screen2.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS docs](api/images/Group7_OROS_SwaggerUI_Screen3.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS docs](api/images/Group7_OROS_SwaggerUI_Screen4.png)](https://github.com/mogonc34/ITSC3155051Group7Project)

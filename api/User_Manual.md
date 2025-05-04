@@ -46,15 +46,15 @@ Before you begin, ensure you have the following installed on your (local) system
 - [Uvicorn](https://uvicorn.org) (or other ASGI web server)
 
 ### 3.3 Assumed User Knowledge
-We are making some assumptions with your knowledge as outlined here
-That you are familiar use of the IDE's command line interface (CLI) to run the project.
-	- Familiar with how to use a Python IDE to run and debug the project code. (Project Team used PyCharm or Visual Studio Pro 2022)
-	- Familiar with how to use a web browser to access the SwaggerUI interface.
-	- Familiar with how to use the FastAPI framework to create and run a web application.
-	- Familiar with how to use a SQL database client to interact with the MySQL database.
-	- Familiar with how to use a testing framework to run unit tests.
-	- Familiar with how to use a version control system to manage the project code.
-	- Familiar with how to clone a GitHub repository and set up a local development environment.
+We are making some assumptions with your knowledge as outlined here.  That you are:
+	- familiar use of the IDE's command line interface (CLI) to run the project.
+	- familiar with how to use a Python IDE to run and debug the project code. (Project Team used PyCharm or Visual Studio Pro 2022)
+	- familiar with how to use a web browser to access the SwaggerUI interface.
+	- familiar with how to use the FastAPI framework to create and run a web application.
+	- familiar with how to use a SQL database client to interact with the MySQL database.
+	- familiar with how to use a testing framework to run unit tests.
+	- familiar with how to use a version control system to manage the project code.
+	- familiar with how to clone a GitHub repository and set up a local development environment.
 
 ## 4. Set up the MySQL database:
 Open MySQL Workbench and create a new database named `onlinerestaurantordersys_db`.
@@ -68,12 +68,12 @@ USE onlinerestaurantordersys_db;
 ```python
 DATABASE_URL = "mysql+pymysql://username:password@localhost/onlinerestaurantordersys_db"
 ```
-[![Group7 OROS Docs](../images/MySQL_db_structure.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS Docs](api/images/MySQL_db_structure.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 
 
 ## 5. Running the Project
 ### 5.1. Start the FastAPI (Uvicorn) server:
-```uvicorn main:app --reload```
+```uvicorn api.main:app --reload```
 ### 5.2. Access the SwaggerUI interface:
 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 ### 5.3. Use the SwaggerUI interface to interact with the API:
@@ -82,7 +82,7 @@ DATABASE_URL = "mysql+pymysql://username:password@localhost/onlinerestaurantorde
 - **PUT**: Update existing records in the database.
 - **DELETE**: Remove records from the database.
 ### 5.4. Use the API endpoints to perform CRUD operations:
-[![Group7 OROS Docs](api/images/Group7_OROS_SwaggerUI_Screen1.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS Docs](images/Group7_OROS_SwaggerUI_Screen1.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 [![Group7 OROS Docs](api/images/Group7_OROS_SwaggerUI_Screen2.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 [![Group7 OROS Docs](api/images/Group7_OROS_SwaggerUI_Screen3.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 [![Group7 OROS Docs](api/images/Group7_OROS_SwaggerUI_Screen4.png)](https://github.com/mogonc34/ITSC3155051Group7Project)

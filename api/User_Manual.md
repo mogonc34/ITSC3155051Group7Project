@@ -3,19 +3,23 @@
 # ITSC-3155 Section-051 Group-7 Final Project User Manual
 
 ## 1. Introduction
-This project is an Online Restaurant Ordering System (OROS) built using FastAPI, MySQL, and SQLAlchemy. 
-It provides a RESTful API for managing orders, customers, menu items, and more. The project uses SwaggerUI 
-for API interaction and testing, eliminating the need for a frontend.
+This project designs, plans, and builds an Online Restaurant Ordering System (OROS), built using FastAPI, MySQL, 
+and SQLAlchemy.  The solution provides a RESTful API for managing orders, customers, menu items, and more. The 
+project uses SwaggerUI for API/database interaction, eliminating the need for a frontend.  We use GitHub for 
+version control and collaborative development.  The project is designed to be easy to use and understand, with 
+clear documentation and examples provided.
+
 
 This manual provides instructions for setting up, running, and interacting with the project.
 
 ## 2. Project Overview
 This project is an Online Restaurant Ordering System (OROS) built using FastAPI, MySQL, and SQLAlchemy.
 It provides a RESTful API for managing orders, customers, menu items, and more. The project uses SwaggerUI
-for API interaction and testing, eliminating the need for a frontend.  Yes, it should be considered barebones, 
-but it is a working project that meets the requirements of the course - to demonstrate understanding of setup, 
-use of a RESTful API, and CRUD operations.  The project is designed to be easy to use and understand, with 
-clear documentation and examples provided.
+for API interaction and testing, eliminating the need for a frontend.  The solution is near barebones, 
+but it is a working solution satisfying requirements of the course project and built using Agile-Scrum framework
+building a Product Back Log with (prioritized) User Stories, Use Case, Class, and Activity (with Swim Lanes) Diagrams to aid
+in overall design and work planning leading to the final building of the coding solution.  Ultimate objective
+being to demonstrate understanding of setup and use of a RESTful API, and CRUD operations.
 
 ## 3. Prerequisites
 Before you begin, ensure yoiu have the following installed on your (local) system:

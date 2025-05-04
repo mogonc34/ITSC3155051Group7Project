@@ -3,23 +3,24 @@
 # ITSC-3155 Section-051 Group-7 Final Project User Manual
 
 ## 1. Introduction - Project Overview
-	This project designs, plans, and builds an Online Restaurant Ordering System (OROS), built using FastAPI, MySQL, 
-	and SQLAlchemy.  The solution provides a RESTful API for managing orders, customers, menu items, and more. The 
-	project uses SwaggerUI for API/database interaction and CRUD operation validation, eliminating the need for a 
-	frontend.  We use GitHub for version control and collaborative development.
-	The solution is near barebones, but it is a working solution satisfying requirements of the course project and 
-	built using Agile-Scrum framework - building a Product Back Log with (prioritized) User Stories, a Use Case 
-	Diagram, a Class Diagram, and an Activity Diagram (with Swim Lanes) to aid in overall design and work planning
-	leading to the final building of the coded solution.  The project is designed to be easy to use and understand,
-	with clear documentation and examples provided. 
-	The primary objective of the project being to design, analyze, and build a working solution for an Online 
-	Restaurant Ordering System (OROS) that demonstrates understanding of setup and use of a RESTful API, and execution
-	of database CRUD operations.
 
-	This User Manual provides instructions for setting up, running, and interacting with the project.
+This project designs, plans, and builds an Online Restaurant Ordering System (OROS), built using FastAPI, MySQL, 
+and SQLAlchemy.  The solution provides a RESTful API for managing orders, customers, menu items, and more. The 
+project uses SwaggerUI for API/database interaction and CRUD operation validation, eliminating the need for a 
+frontend.  We use GitHub for version control and collaborative development.
+The solution is near barebones, but it is a working solution satisfying requirements of the course project and 
+built using Agile-Scrum framework - building a Product Back Log with (prioritized) User Stories, a Use Case 
+Diagram, a Class Diagram, and an Activity Diagram (with Swim Lanes) to aid in overall design and work planning
+leading to the final building of the coded solution.  The project is designed to be easy to use and understand,
+with clear documentation and examples provided. 
+The primary objective of the project being to design, analyze, and build a working solution for an Online 
+Restaurant Ordering System (OROS) that demonstrates understanding of setup and use of a RESTful API, and execution
+of database CRUD operations.
 
-	No frontend build was required, instead, opting to demonstrate/conduct API-interactive CRUD operations, we use [Uvicorn](https://uvicorn.org) - an ASGI web server
-	implementation for Python - in conjunction with [SwaggerUI](https://swagger.io/tools/swagger-ui/).
+This User Manual provides instructions for setting up, running, and interacting with the project.
+
+No frontend build was required, instead, opting to demonstrate/conduct API-interactive CRUD operations, we use [Uvicorn](https://uvicorn.org) - an ASGI web server
+implementation for Python - in conjunction with [SwaggerUI](https://swagger.io/tools/swagger-ui/).
 
 ## 3. Prerequisites
 Before you begin, ensure you have the following installed on your (local) system:
@@ -46,7 +47,7 @@ Before you begin, ensure you have the following installed on your (local) system
 
 ### 3.3 Assumed User Knowledge
 We are making some assumptions with your knowledge as outlined here
-''' That you are familiar use of the IDE's command line interface (CLI) to run the project.
+That you are familiar use of the IDE's command line interface (CLI) to run the project.
 	- Familiar with how to use a Python IDE to run and debug the project code. (Project Team used PyCharm or Visual Studio Pro 2022)
 	- Familiar with how to use a web browser to access the SwaggerUI interface.
 	- Familiar with how to use the FastAPI framework to create and run a web application.
@@ -56,25 +57,25 @@ We are making some assumptions with your knowledge as outlined here
 	- Familiar with how to clone a GitHub repository and set up a local development environment.
 
 ## 4. Set up the MySQL database:
-Open MySQL Workbench and create a new database named `oros_db`.
+Open MySQL Workbench and create a new database named `onlinerestaurantordersys_db`.
 ### 4.1. Create the database and tables:
-	```sql
-	CREATE DATABASE onlinerestaurantordersys_db;
-	USE onlinerestaurantordersys_db;
-	```
+```sql
+CREATE DATABASE onlinerestaurantordersys_db;
+USE onlinerestaurantordersys_db;
+```
 
 ### 4.2. Update the database connection settings in the `main.py` file:
-	```python
-	DATABASE_URL = "mysql+pymysql://username:password@localhost/oros_db"
-	```
-[![Group7 OROS Docs](api/images/MySQL_db_structure.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+```python
+DATABASE_URL = "mysql+pymysql://username:password@localhost/onlinerestaurantordersys_db"
+```
+[![Group7 OROS Docs](../images/MySQL_db_structure.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 
 
 ## 5. Running the Project
 ### 5.1. Start the FastAPI (Uvicorn) server:
 ```uvicorn main:app --reload```
 ### 5.2. Access the SwaggerUI interface:
-	[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 ### 5.3. Use the SwaggerUI interface to interact with the API:
 - **GET**: Retrieve data from the API.
 - **POST**: Create new records in the database.

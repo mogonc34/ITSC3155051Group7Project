@@ -14,7 +14,6 @@ This GitHub Repository is currently shared (Collaborators) with:
 		Professor - Dr. Mohsen Dorodchi (Mohsen.Dorodchi@charlotte.edu), GitHub = mdorodch
 
 ### Group Bio Page
-[![Meet Group-7](https://raw.githubusercontent.com/mogonc34/ITSC3155051Group7Project/refs/heads/main/group_bio_template/index.html?token=GHSAT0AAAAAADCZBW5E24JYHPUNDRTD3M462AUATRA)](https://raw.githubusercontent.com/mogonc34/ITSC3155051Group7Project/refs/heads/main/group_bio_template/index.html?token=GHSAT0AAAAAADCZBW5E24JYHPUNDRTD3M462AUATRA)
 [![Group Bios](api/images/Group bio page.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 
 Project Description:

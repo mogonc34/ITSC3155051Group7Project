@@ -13,6 +13,10 @@ This GitHub Repository is currently shared (Collaborators) with:
 		(secondary) TA - Hitakshi Shirude (hshirud1@charlotte.edu), GitHub = Hitaskhi02
 		Professor - Dr. Mohsen Dorodchi (Mohsen.Dorodchi@charlotte.edu), GitHub = mdorodch
 
+### Group Bio Page
+[![Meet Group-7](https://raw.githubusercontent.com/mogonc34/ITSC3155051Group7Project/refs/heads/main/group_bio_template/index.html?token=GHSAT0AAAAAADCZBW5E24JYHPUNDRTD3M462AUATRA)](https://raw.githubusercontent.com/mogonc34/ITSC3155051Group7Project/refs/heads/main/group_bio_template/index.html?token=GHSAT0AAAAAADCZBW5E24JYHPUNDRTD3M462AUATRA)
+[![Group Bios](api/images/Group bio page.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+
 Project Description:
 This is a group project to build an Online Restaurant Ordering System (OROS) using Agile methodology.  OROS will develop a (RESTful)
 API-based application using FastAPI, MySQL, and SQLAlchemy that enables customers to order menu items online, provide them a status

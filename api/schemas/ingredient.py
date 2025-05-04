@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import ConfigDict, BaseModel
 from typing import Optional
 
 class IngredientBase(BaseModel):
@@ -16,6 +16,4 @@ class IngredientUpdate(BaseModel):
 
 class IngredientResponse(IngredientBase):
     ingredient_id: int
-
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)

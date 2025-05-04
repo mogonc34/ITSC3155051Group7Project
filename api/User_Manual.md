@@ -23,6 +23,10 @@ Before you begin, you will need to install:
 	- [Uvicorn](https://uvicorn.org) (or other ASGI web server)
 
 
+With the above tools installed, and properly instantiated, you should seetart the project
+
+
+
 * To install fnm follow the [official fnm guide](https://github.com/Schniz/fnm#installation). If you prefer nvm, you can install it using the [official nvm guide](https://github.com/nvm-sh/nvm#installing-and-updating).
 
 * After installing either nvm or fnm, proceed to the `frontend` directory:

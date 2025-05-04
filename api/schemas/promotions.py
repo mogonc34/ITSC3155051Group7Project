@@ -1,10 +1,12 @@
-from pydantic import BaseModel, condecimal
+from pydantic import Field, ConfigDict, BaseModel
 from typing import Optional
 from datetime import date
+from decimal import Decimal
+from typing_extensions import Annotated
 
 class PromotionBase(BaseModel):
     description: Optional[str] = None
-    discount_percent: condecimal(ge=0, le=100, max_digits=5, decimal_places=2)
+    discount_percent: Annotated[Decimal, Field(ge=0, le=100, max_digits=5, decimal_places=2)]
     expiration_date: Optional[date] = None
 
 class PromotionCreate(PromotionBase):
@@ -12,11 +14,9 @@ class PromotionCreate(PromotionBase):
 
 class PromotionUpdate(BaseModel):
     description: Optional[str] = None
-    discount_percent: Optional[condecimal(ge=0, le=100, max_digits=5, decimal_places=2)] = None
+    discount_percent: Optional[Annotated[Decimal, Field(ge=0, le=100, max_digits=5, decimal_places=2)]] = None
     expiration_date: Optional[date] = None
 
 class PromotionResponse(PromotionBase):
     promo_code: str
-
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)

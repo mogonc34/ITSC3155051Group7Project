@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import ConfigDict, BaseModel
 
 class OrderPromotionBase(BaseModel):
     order_id: int
@@ -8,5 +8,4 @@ class OrderPromotionCreate(OrderPromotionBase):
     pass
 
 class OrderPromotionResponse(OrderPromotionBase):
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)

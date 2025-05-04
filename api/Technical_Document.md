@@ -13,6 +13,11 @@
 - ✅ [Pytest](https://pytest.org) for Unit Testing.
 - 📦 [GitHub](https://www.github.com) for collaborative development and version control.
 
+
+### Successful SwaggerUI browser page
+[![API docs](api/images/Group7 OROS SwaggerUI Screen1.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+
+```bash
 ### Dashboard Login
 
 [![API docs](img/login.png)](https://github.com/fastapi/full-stack-fastapi-template)

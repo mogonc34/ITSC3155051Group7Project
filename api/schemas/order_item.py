@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import ConfigDict, BaseModel
 from typing import Optional
 
 class OrderItemBase(BaseModel):
@@ -16,6 +16,4 @@ class OrderItemUpdate(BaseModel):
 
 class OrderItemResponse(OrderItemBase):
     order_item_id: int
-
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)

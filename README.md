@@ -15,6 +15,7 @@ This GitHub Repository is currently shared (Collaborators) with:
 
 ### Group Bio Page
 [![Group Bios](api/images/Group_bio_page.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS Docs](api/images/MySQL_db_structure.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 
 Project Description:
 This is a group project to build an Online Restaurant Ordering System (OROS) using Agile methodology.  OROS will develop a (RESTful)

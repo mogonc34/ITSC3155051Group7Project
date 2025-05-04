@@ -22,16 +22,16 @@ This User Manual provides instructions for setting up, running, and interacting 
 No frontend build was required, instead, opting to demonstrate/conduct API-interactive CRUD operations, we use [Uvicorn](https://uvicorn.org) - an ASGI web server
 implementation for Python - in conjunction with [SwaggerUI](https://swagger.io/tools/swagger-ui/).
 
-## 3. Prerequisites
+## 2. Prerequisites
 Before you begin, ensure you have the following installed on your (local) system:
 
-### 3.1. Development Tools
+### 2.1. Development Tools
 - [MySQL (Community) and MySQL Workbench](https://www.mysql.com) (or other SQL database client)
 - [PyCharm](https://www.jetbrains.com/pycharm/) (or other Python IDE)
 - [GitHub](https://www.github.com) (or other version control system)
 - [SwaggerUI](https://swagger.io/tools/swagger-ui/) (or other API documentation tool)
 
-### 3.2 Python Libraries
+### 2.2 Python Libraries
 #### Core Libraries
 - [FastAPI](https://fastapi.tiangolo.com) - or other Python web framework
 - [cryptography](https://pypi.org/project/cryptography/) - or other encryption library
@@ -45,7 +45,7 @@ Before you begin, ensure you have the following installed on your (local) system
 - [Pytest](https://pytest.org) (or other testing framework)
 - [Uvicorn](https://uvicorn.org) (or other ASGI web server)
 
-### 3.3 Assumed User Knowledge
+### 2.3 Assumed User Knowledge
 We are making some assumptions with your knowledge as outlined here.  That you are:
 	- familiar use of the IDE's command line interface (CLI) to run the project.
 	- familiar with how to use a Python IDE to run and debug the project code. (Project Team used PyCharm or Visual Studio Pro 2022)
@@ -56,32 +56,33 @@ We are making some assumptions with your knowledge as outlined here.  That you a
 	- familiar with how to use a version control system to manage the project code.
 	- familiar with how to clone a GitHub repository and set up a local development environment.
 
-## 4. Set up the MySQL database:
+## 3. Set up the MySQL database:
 Open MySQL Workbench and create a new database named `onlinerestaurantordersys_db`.
-### 4.1. Create the database and tables:
+### 3.1. Create the database and tables:
 ```sql
 CREATE DATABASE onlinerestaurantordersys_db;
 USE onlinerestaurantordersys_db;
 ```
 
-### 4.2. Update the database connection settings in the `main.py` file:
+### 3.2. Update the database connection settings in the `main.py` file:
 ```python
 DATABASE_URL = "mysql+pymysql://username:password@localhost/onlinerestaurantordersys_db"
 ```
 [![Group7 OROS Docs](api/images/MySQL_db_structure.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group Bios](api/images/Group_bio_page.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 
 
-## 5. Running the Project
-### 5.1. Start the FastAPI (Uvicorn) server:
+## 4. Running the Project
+### 4.1. Start the FastAPI (Uvicorn) server:
 ```uvicorn api.main:app --reload```
-### 5.2. Access the SwaggerUI interface:
+### 4.2. Access the SwaggerUI interface:
 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
-### 5.3. Use the SwaggerUI interface to interact with the API:
+### 4.3. Use the SwaggerUI interface to interact with the API:
 - **GET**: Retrieve data from the API.
 - **POST**: Create new records in the database.
 - **PUT**: Update existing records in the database.
 - **DELETE**: Remove records from the database.
-### 5.4. Use the API endpoints to perform CRUD operations:
+### 4.4. Use the API endpoints to perform CRUD operations:
 [![Group7 OROS Docs](images/Group7_OROS_SwaggerUI_Screen1.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 [![Group7 OROS Docs](api/images/Group7_OROS_SwaggerUI_Screen2.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 [![Group7 OROS Docs](api/images/Group7_OROS_SwaggerUI_Screen3.png)](https://github.com/mogonc34/ITSC3155051Group7Project)

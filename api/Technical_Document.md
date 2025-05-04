@@ -17,3 +17,11 @@
 ### Successful SwaggerUI browser page
 [![API docs](api/images/Group7_OROS_SwaggerUI_Screen1.png)(https://github.com/mogonc34/ITSC3155051Group7Project)
 
+### Key API Endpoints
+ | Method | Endpoint         | Description                  |
+ |--------|------------------|------------------------------|
+ | GET    | /orders/         | Retrieve all orders          |
+ | POST   | /orders/         | Create a new order           |
+ | GET    | /orders/{id}     | Retrieve an order by ID      |
+ | PUT    | /orders/{id}     | Update an order by ID        |
+ | DELETE | /orders/{id}     | Delete an order by ID        |

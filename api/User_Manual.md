@@ -82,7 +82,7 @@ DATABASE_URL = "mysql+pymysql://username:password@localhost/onlinerestaurantorde
 - **PUT**: Update existing records in the database.
 - **DELETE**: Remove records from the database.
 ### 4.4. Use the API endpoints to perform CRUD operations:
-[![Group7 OROS Docs](images/Group7_OROS_SwaggerUI_Screen1.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
-[![Group7 OROS Docs](api/images/Group7_OROS_SwaggerUI_Screen2.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
-[![Group7 OROS Docs](api/images/Group7_OROS_SwaggerUI_Screen3.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
-[![Group7 OROS Docs](api/images/Group7_OROS_SwaggerUI_Screen4.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS Docs](../apiimages/Group7_OROS_SwaggerUI_Screen1.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS Docs](../api/images/Group7_OROS_SwaggerUI_Screen2.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS Docs](../api/images/Group7_OROS_SwaggerUI_Screen3.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS Docs](../api/images/Group7_OROS_SwaggerUI_Screen4.png)](https://github.com/mogonc34/ITSC3155051Group7Project)

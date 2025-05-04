@@ -7,6 +7,8 @@ class OrderBase(BaseModel):
     payment_id: Optional[int] = None
     order_status: Optional[str] = None
     total_price: Optional[float] = None
+    tracking_number: Optional[str] = None
+    order_type: str
 
 class OrderCreate(OrderBase):
     pass

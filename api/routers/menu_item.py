@@ -22,6 +22,10 @@ def get_all_menu_items(db: Session = Depends(get_db)):
 def get_menu_item(menu_item_id: int, db: Session = Depends(get_db)):
     return controller.read_one(db, menu_item_id)
 
+@router.get("/category/{category}", response_model=list[schema.MenuItemResponse])
+def get_menu_item_by_category(category: str, db: Session = Depends(get_db)):
+    return controller.get_by_food_category(db, category)
+
 @router.put("/{menu_item_id}", response_model=schema.MenuItemResponse)
 def update_menu_item(menu_item_id: int, request: schema.MenuItemUpdate, db: Session = Depends(get_db)):
     return controller.update(db, menu_item_id, request)

@@ -68,8 +68,7 @@ USE onlinerestaurantordersys_db;
 ```python
 DATABASE_URL = "mysql+pymysql://username:password@localhost/onlinerestaurantordersys_db"
 ```
-[![Group7 OROS Docs](api/images/MySQL_db_structure.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
-[![Group Bios](api/images/Group_bio_page.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS Docs](../api/images/MySQL_db_structure.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 
 
 ## 4. Running the Project

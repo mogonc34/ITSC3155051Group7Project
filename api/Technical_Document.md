@@ -15,5 +15,5 @@
 
 
 ### Successful SwaggerUI browser page
-[![API docs](api/images/Group7 OROS SwaggerUI Screen1.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![API docs](api/images/Group7_OROS_SwaggerUI_Screen1.png)(https://github.com/mogonc34/ITSC3155051Group7Project)
 

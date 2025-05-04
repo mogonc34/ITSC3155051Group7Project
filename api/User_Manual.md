@@ -45,42 +45,20 @@ Before you begin, ensure you have the following installed on your (local) system
 - [Pytest](https://pytest.org) (or other testing framework)
 - [Uvicorn](https://uvicorn.org) (or other ASGI web server)
 
-### 2.3 Assumed User Knowledge
-We are making some assumptions with your knowledge as outlined here.  That you are:
-	- familiar use of the IDE's command line interface (CLI) to run the project.
-	- familiar with how to use a Python IDE to run and debug the project code. (Project Team used PyCharm or Visual Studio Pro 2022)
-	- familiar with how to use a web browser to access the SwaggerUI interface.
-	- familiar with how to use the FastAPI framework to create and run a web application.
-	- familiar with how to use a SQL database client to interact with the MySQL database.
-	- familiar with how to use a testing framework to run unit tests.
-	- familiar with how to use a version control system to manage the project code.
-	- familiar with how to clone a GitHub repository and set up a local development environment.
-
-## 3. Set up the MySQL database:
-Open MySQL Workbench and create a new database named `onlinerestaurantordersys_db`.
-### 3.1. Create the database and tables:
-```sql
-CREATE DATABASE onlinerestaurantordersys_db;
-USE onlinerestaurantordersys_db;
-```
-
-### 3.2. Update the database connection settings in the `main.py` file:
-```python
-DATABASE_URL = "mysql+pymysql://username:password@localhost/onlinerestaurantordersys_db"
-```
-[![Group7 OROS Docs](../api/images/MySQL_db_structure.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
-
-
 ## 4. Running the Project
+
 ### 4.1. Start the FastAPI (Uvicorn) server:
 ```uvicorn api.main:app --reload```
+
 ### 4.2. Access the SwaggerUI interface:
 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+
 ### 4.3. Use the SwaggerUI interface to interact with the API:
 - **GET**: Retrieve data from the API.
 - **POST**: Create new records in the database.
 - **PUT**: Update existing records in the database.
 - **DELETE**: Remove records from the database.
+
 ### 4.4. Use the API endpoints to perform CRUD operations:
 [![Group7 OROS Docs](../api/images/Group7_OROSSwaggerUIScreen1.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 [![Group7 OROS Docs](../api/images/Group7_OROSSwaggerUIScreen2.png)](https://github.com/mogonc34/ITSC3155051Group7Project)

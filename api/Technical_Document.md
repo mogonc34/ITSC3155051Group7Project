@@ -1,6 +1,7 @@
 ﻿## ITSC-3155 Section 051 Group-7 Final Project Technology Stack & Uses
 
 [Meet Group-7](https://raw.githubusercontent.com/mogonc34/ITSC3155051Group7Project/refs/heads/main/group_bio_template/index.html?token=GHSAT0AAAAAADCZBW5E24JYHPUNDRTD3M462AUATRA)
+[![Meet Group-7](../api/images/Group_bio_page.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 
 ## 1. Project Overview
 

@@ -22,9 +22,26 @@ the database schema, and the API endpoints.
 
 ## 2. Customer
 ### 2.1. Creating an Account
-To create an account, the customer must provide their name, email address, and password. The API will validate the input and 
-create a new customer record in the database.
-[![Group7 OROS Docs](../api/images/Group7_OROSSwaggerUIScreen1.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+To create an account, from the SwaggerUI menu, select Post /customers/ Create Customer to expand the option.
+[![Group7 OROS Docs](../api/images/SwaggerUI_SelectCreateCustomer.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+Click Try It Out in 
+the upper right (highlighted here:
+[![Group7 OROS Docs](../api/images/SwaggerUI_CreateCustomerTIO.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+
+enter the required information in the fields highlighted here.  **Reminder, make note of your Customer ID, as you will need this 
+to validate or make any changes to your account (2.2).  Once you have entered the required information, click Execute.  
+The program will create a new customer record with the information you've provided and assign a new Customer ID.  
+Look for a "Code 201, Successful Response" in the Responses section.
+[![Group7 OROS Docs](../api/images/SwaggerUI_CreateCustomerExecute.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+
+
+
+must provide their name, email address, and password. The API will validate the input and 
+create a new customer record in the database.  Be sure to note your Customer ID, as you will need it to validate your account (2.2)
+and access for updates later.
+
+### 2.2. Validate Account
+To validate an account, the customer must provide their email address and password. The API will check the database for a matching record
 
 
 ### 2.2. Placing an Order

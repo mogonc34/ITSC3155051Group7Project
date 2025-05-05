@@ -22,26 +22,24 @@ the database schema, and the API endpoints.
 
 ## 2. Customer
 ### 2.1. Creating an Account
-To create an account, from the SwaggerUI menu, select Post /customers/ Create Customer to expand the option.
+#### 2.1.1: To create an account, from the SwaggerUI menu, select Post /customers/ Create Customer to expand the option.
 [![Group7 OROS Docs](../api/images/SwaggerUI_SelectCreateCustomer.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
-Click Try It Out in 
-the upper right (highlighted here:
+#### 2.1.2: Click Try It Out in the upper right (highlighted here:
 [![Group7 OROS Docs](../api/images/SwaggerUI_CreateCustomerTIO.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
-
-enter the required information in the fields highlighted here.  **Reminder, make note of your Customer ID, as you will need this 
-to validate or make any changes to your account (2.2).  Once you have entered the required information, click Execute.  
-The program will create a new customer record with the information you've provided and assign a new Customer ID.  
-Look for a "Code 201, Successful Response" in the Responses section.
+#### 2.1.3: Enter the required information in the fields highlighted here.
+**Reminder, make note of your Customer ID, as you will need this to validate or make any changes to your account (2.2).
+Once you have entered the required information, click Execute.  The program will create a new customer record with the
+information you've provided and assign a new Customer ID.  A "Code 201, Successful Response" in the Responses section after
+you've clicked 'Execute' signals that your Customer Account has been created successfully.
 [![Group7 OROS Docs](../api/images/SwaggerUI_CreateCustomerExecute.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 
+### 2.2. Validate Your Customer Account
+We'll go ahead and validate your account has been created & stored - click on the Post /customers/{customer_id} Get Customer option,
+then click 'Try It Out' and enter your Customer ID in the field (highlighted) provided.  Click 'Execute' and you should see a 
+"Code 200, Successful Response" in the Responses section.  Validate your Customer Information is as entered above.
+[![Group7 OROS Docs](../api/images/SwaggerUI_GetCustomer.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 
-
-must provide their name, email address, and password. The API will validate the input and 
-create a new customer record in the database.  Be sure to note your Customer ID, as you will need it to validate your account (2.2)
-and access for updates later.
-
-### 2.2. Validate Account
-To validate an account, the customer must provide their email address and password. The API will check the database for a matching record
+Note: if you failed to capture your Customer ID in 2.1.2, you will need to contact the restaurant staff to get your Customer ID.
 
 
 ### 2.2. Placing an Order

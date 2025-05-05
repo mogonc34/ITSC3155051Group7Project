@@ -121,10 +121,10 @@ uvicorn api.main:app --reload
 ...each set of operations are repeated for Orders, Order Items, Order Promotions, Payments, Promotions, and Ratings-Reviews.
 
 ### Successful SwaggerUI browser page
-[![API docs](api/images/Group7_OROS_SwaggerUI_Screen1.png)(https://github.com/mogonc34/ITSC3155051Group7Project)
-[![API docs](api/images/Group7_OROS_SwaggerUI_Screen2.png)(https://github.com/mogonc34/ITSC3155051Group7Project)
-[![API docs](api/images/Group7_OROS_SwaggerUI_Screen3.png)(https://github.com/mogonc34/ITSC3155051Group7Project)
-[![API docs](api/images/Group7_OROS_SwaggerUI_Screen4.png)(https://github.com/mogonc34/ITSC3155051Group7Project)
+[![API docs](..api/images/Group7_OROS_SwaggerUI_Screen1.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![API docs](..api/images/Group7_OROS_SwaggerUI_Screen2.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![API docs](..api/images/Group7_OROS_SwaggerUI_Screen3.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![API docs](..api/images/Group7_OROS_SwaggerUI_Screen4.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 
 ### Successful MySQL database structure, with Tables (SCHEMAS window)
 

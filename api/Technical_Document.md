@@ -60,8 +60,8 @@ CREATE DATABASE onlinerestaurantordersys_db;
 USE onlinerestaurantordersys_db;
 ```
 You should see the following in your MySQL Workbench SCHEMAS:
-[![Group7 OROS Docs](../api/images/MySQL_db_structure.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 
+[![Group7 OROS Docs](../api/images/MySQL_db_structure.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 
 ### 2.3 Install the required packages and create your virtual environment:
 ```bash
@@ -76,7 +76,7 @@ SQLALCHEMY_DATABASE_URL = f"mysql+pymysql://{conf.db_user}:{quote_plus(conf.db_p
 ```
 #### 2.4.2 Update the Conf Class in the 'config.py' file:
 ```python
-    db_user = "yourlocalhostusername"  # Replace with your MySQL (localhost) user, if different
+    db_user = "yourlocalhostusername"  # Replace with your MySQL (localhost) user, i.e., root
     db_password = "yourlocalhostpassword"  # Replace with your MySQL (localhost) password
 ```
 ## 3. Run the Project
@@ -106,38 +106,22 @@ uvicorn api.main:app --reload
 [![API docs](api/images/Group7_OROS_SwaggerUI_Screen1.png)(https://github.com/mogonc34/ITSC3155051Group7Project)
 
 ### Key API Endpoints
- | Method | Endpoint         | Description                  |
- |--------|------------------|------------------------------|
- | GET    | /orders/         | Retrieve all orders          |
- | POST   | /orders/         | Create a new order           |
- | GET    | /orders/{id}     | Retrieve an order by ID      |
- | PUT    | /orders/{id}     | Update an order by ID        |
- | DELETE | /orders/{id}     | Delete an order by ID        |
- | GET    | /customers/      | Retrieve all customers       |
- | POST   | /customers/      | Create a new customer        |
- | GET    | /customers/{id}  | Retrieve a customer by ID    |
- | PUT    | /customers/{id}  | Update a customer by ID      |
- | DELETE | /customers/{id}  | Delete a customer by ID      |
- | GET    | /menu_items/     | Retrieve all menu items      |
- | POST   | /menu_items/     | Create a new menu item       |
- | GET    | /menu_items/{id} | Retrieve a menu item by ID   |
- | PUT    | /menu_items/{id} | Update a menu item by ID     |
-
-
-## 3. Set up the MySQL database:
-### 3.1. Create the database and tables:
-```sql
-CREATE DATABASE onlinerestaurantordersys_db;
-USE onlinerestaurantordersys_db;
-```
-
-### 3.2. Update the database connection settings in the `main.py` file:
-```python
-SQLALCHEMY_DATABASE_URL = f"mysql+pymysql://{conf.db_user}:{quote_plus(conf.db_password)}@{conf.db_host}:{conf.db_port}/{conf.db_name}?charset=utf8mb4"
-```
-[![Group7 OROS Docs](../api/images/MySQL_db_structure.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
-
-### 3.3. Update the db config Class in the `config.py` file:
-[![Group7 OROS Docs](../api/images/MySQL_db_structure.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
-
+ | Method | Endpoint           | Description                   |
+ |--------|--------------------|-------------------------------|
+ | GET    | /customers/        | Retrieve all customers        |
+ | POST   | /customers/        | Create a new customer         |
+ | GET    | /customers/{id}    | Retrieve a customer by ID     |
+ | PUT    | /customers/{id}    | Update a customer by ID       |
+ | DELETE | /customers/{id}    | Delete a customer by ID       |
+ | GET    | /ingredients/      | Retrieve all ingredients      |
+ | POST   | /ingredients/      | Create a new ingredient       |
+ | GET    | /ingredients/{id}  | Retrieve an ingredient by ID  |
+ | PUT    | /ingredients/{id}  | Update an ingredient by ID    |
+ | DELETE | /ingredients/{id}  | Delete an ingredient by ID    |
+ | GET    | /menu_items/       | Retrieve all menu items       |
+ | POST   | /menu_items/       | Create a new menu item        |
+ | GET    | /menu_items/{id}   | Retrieve a menu item by ID    |
+ | PUT    | /menu_items/{id}   | Update a menu item by ID      |
+ | DELETE | /menu_items/{id}   | Delete a menu item by ID      |
+...each set of operations are repeated for Orders, Order Items, Order Promotions, Payments, Promotions, and Ratings-Reviews.
 

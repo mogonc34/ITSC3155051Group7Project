@@ -54,32 +54,42 @@ We have made some assumptions, presuming your knowledge as outlined here.  That 
 
 ## 2. Project Setup
 ### 2.1. Clone the repository:
-### 2.2 Create the MySQL database:
-### 2.3 Install the required packages:
+### 2.2 Open MySQL Workbench and create a new database named `onlinerestaurantordersys_db`.
+```sql
+CREATE DATABASE onlinerestaurantordersys_db;
+USE onlinerestaurantordersys_db;
+```
+You should see the following in your MySQL Workbench SCHEMAS:
+[![Group7 OROS Docs](../api/images/MySQL_db_structure.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+
+
+### 2.3 Install the required packages and create your virtual environment:
 ```bash
 pip install -r requirements.txt
+python -m venv .venv
 ```
 
-### 2.4 Configure the database connection
+### 2.4 Update files to point to and use your local database connection
 #### 2.4.1 Update the SQLAlchemy database URL settings in the `main.py` file:
 ```python
 SQLALCHEMY_DATABASE_URL = f"mysql+pymysql://{conf.db_user}:{quote_plus(conf.db_password)}@{conf.db_host}:{conf.db_port}/{conf.db_name}?charset=utf8mb4"
 ```
 #### 2.4.2 Update the Conf Class in the 'config.py' file:
 ```python
-    db_user = "root"  # Replace with your MySQL (localhost) user, if different
-    db_password = "adminMOGo1!"  # Replace with your MySQL (localhost) password
+    db_user = "yourlocalhostusername"  # Replace with your MySQL (localhost) user, if different
+    db_password = "yourlocalhostpassword"  # Replace with your MySQL (localhost) password
 ```
-## 3. Running the Project
+## 3. Run the Project
 ### 3.1. Activate the virtual environment:
 ```bash
-source venv/bin/activate
+source .venv/bin/activate
 ```
 
 ### 3.2. Start the FastAPI (Uvicorn) server:
 ```bash
 uvicorn api.main:app --reload
 ```
+
 ### 3.3. Access the SwaggerUI interface:
 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
@@ -113,12 +123,8 @@ uvicorn api.main:app --reload
  | GET    | /menu_items/{id} | Retrieve a menu item by ID   |
  | PUT    | /menu_items/{id} | Update a menu item by ID     |
 
- bring 'Technical Document' over from User Manual
-
- ### 2.3 Assumed User Knowledge
 
 ## 3. Set up the MySQL database:
-Open MySQL Workbench and create a new database named `onlinerestaurantordersys_db`.
 ### 3.1. Create the database and tables:
 ```sql
 CREATE DATABASE onlinerestaurantordersys_db;
@@ -132,10 +138,6 @@ SQLALCHEMY_DATABASE_URL = f"mysql+pymysql://{conf.db_user}:{quote_plus(conf.db_p
 [![Group7 OROS Docs](../api/images/MySQL_db_structure.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 
 ### 3.3. Update the db config Class in the `config.py` file:
-```python
-    db_user = "yourlocalhostusername"  # Replace with your MySQL (localhost) user, if different
-    db_password = "yourlocalhostpassword"  # Replace with your MySQL (localhost) password
-```
 [![Group7 OROS Docs](../api/images/MySQL_db_structure.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 
 

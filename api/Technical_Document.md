@@ -99,12 +99,6 @@ uvicorn api.main:app --reload
 - **PUT**: Update existing records in the database.
 - **DELETE**: Remove records from the database.
 
-### 4.4. Use the API endpoints to perform CRUD operations:
-
-
-### Successful SwaggerUI browser page
-[![API docs](api/images/Group7_OROS_SwaggerUI_Screen1.png)(https://github.com/mogonc34/ITSC3155051Group7Project)
-
 ### Key API Endpoints
  | Method | Endpoint           | Description                   |
  |--------|--------------------|-------------------------------|
@@ -123,5 +117,16 @@ uvicorn api.main:app --reload
  | GET    | /menu_items/{id}   | Retrieve a menu item by ID    |
  | PUT    | /menu_items/{id}   | Update a menu item by ID      |
  | DELETE | /menu_items/{id}   | Delete a menu item by ID      |
+
 ...each set of operations are repeated for Orders, Order Items, Order Promotions, Payments, Promotions, and Ratings-Reviews.
+
+### Successful SwaggerUI browser page
+[![API docs](api/images/Group7_OROS_SwaggerUI_Screen1.png)(https://github.com/mogonc34/ITSC3155051Group7Project)
+[![API docs](api/images/Group7_OROS_SwaggerUI_Screen2.png)(https://github.com/mogonc34/ITSC3155051Group7Project)
+[![API docs](api/images/Group7_OROS_SwaggerUI_Screen3.png)(https://github.com/mogonc34/ITSC3155051Group7Project)
+[![API docs](api/images/Group7_OROS_SwaggerUI_Screen4.png)(https://github.com/mogonc34/ITSC3155051Group7Project)
+
+### Successful MySQL database structure, with Tables (SCHEMAS window)
+
+[![Group7 OROS Docs](../api/images/Group7_DbStucturewithTables.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 

@@ -22,7 +22,11 @@ the database schema, and the API endpoints.
 
 ## 2. Customer
 ### 2.1. Creating an Account
-To create an account, the customer must provide their name, email address, and password. The API will validate the input and create a new customer record in the database.
+To create an account, the customer must provide their name, email address, and password. The API will validate the input and 
+create a new customer record in the database.
+[![Group7 OROS Docs](../api/images/Group7_OROSSwaggerUIScreen1.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+
+
 ### 2.2. Placing an Order
 To place an order, the customer must provide their account information, the menu items they wish to order, and their payment information. The API will validate the input and create a new order record in the database.
 ### 2.3. Viewing Order Status
@@ -112,7 +116,6 @@ To view the feedback given by a customer for an order, the restaurant staff must
 
 
 With MySQL Server running and the SwaggerUI instantiated, your browser should have a long page menu that looks like this:
-[![Group7 OROS Docs](../api/images/Group7_OROSSwaggerUIScreen1.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 [![Group7 OROS Docs](../api/images/Group7_OROSSwaggerUIScreen2.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 [![Group7 OROS Docs](../api/images/Group7_OROSSwaggerUIScreen3.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 [![Group7 OROS Docs](../api/images/Group7_OROSSwaggerUIScreen4.png)](https://github.com/mogonc34/ITSC3155051Group7Project)

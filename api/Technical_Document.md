@@ -120,9 +120,17 @@ uvicorn api.main:app --reload
 
 ...each set of operations are repeated for Orders, Order Items, Order Promotions, Payments, Promotions, and Ratings-Reviews.
 
+### Successful MySQL database structure, with Tables (SCHEMAS window)
+[![Group7 OROS Docs](../api/images/Group7_DbStucturewithTables.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+
 ### Successful SwaggerUI browser page
 [![Group7 OROS Docs](../api/images/Group7_SwaggerUI_Customers.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
-
-### Successful MySQL database structure, with Tables (SCHEMAS window)
-
-[![Group7 OROS Docs](../api/images/Group7_DbStucturewithTables.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS Docs](../api/images/Group7_SwaggerUI_Ingredients.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS Docs](../api/images/Group7_SwaggerUI_MenuItems.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS Docs](../api/images/Group7_SwaggerUI_MenuItemIngredients.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS Docs](../api/images/Group7_SwaggerUI_Orders.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS Docs](../api/images/Group7_SwaggerUI_OrderItems.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS Docs](../api/images/Group7_SwaggerUI_OrderPromotions.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS Docs](../api/images/Group7_SwaggerUI_Payments.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS Docs](../api/images/Group7_SwaggerUI_Promotions.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS Docs](../api/images/Group7_SwaggerUI_RatingReviews.png)](https://github.com/mogonc34/ITSC3155051Group7Project)

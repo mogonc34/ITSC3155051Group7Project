@@ -17,50 +17,21 @@ The primary objective of the project being to design, analyze, and build a worki
 Restaurant Ordering System (OROS) that demonstrates understanding of setup and use of a RESTful API, and execution
 of database CRUD operations.
 
-This User Manual provides instructions for setting up, running, and interacting with the project.
-
 No frontend build was required, instead, opting to demonstrate/conduct API-interactive CRUD operations, we use [Uvicorn](https://uvicorn.org) - an ASGI web server
 implementation for Python - in conjunction with [SwaggerUI](https://swagger.io/tools/swagger-ui/).
 
-## 2. Prerequisites
-Before you begin, ensure you have the following installed on your (local) system:
+### 1.1. Prerequisites
 
-### 2.1. Development Tools
-- [MySQL (Community) and MySQL Workbench](https://www.mysql.com) (or other SQL database client)
-- [PyCharm](https://www.jetbrains.com/pycharm/) (or other Python IDE)
-- [GitHub](https://www.github.com) (or other version control system)
-- [SwaggerUI](https://swagger.io/tools/swagger-ui/) (or other API documentation tool)
-
-### 2.2 Python Libraries
-#### Core Libraries
-- [FastAPI](https://fastapi.tiangolo.com) - or other Python web framework
-- [cryptography](https://pypi.org/project/cryptography/) - or other encryption library
-- [HTTPX](https://www.python-httpx.org/) - or other HTTP client
-- [Pydantic](https://docs.pydantic.dev) - or other data validation library
-- [PyMySQL](https://pypi.org/project/PyMySQL/) - or other MySQL driver
-- [SQLAlchemy](https://www.sqlalchemy.org/) - or other ORM (Object Relational Mapper)
-- [SQLModel](https://sqlmodel.tiangolo.com) - or other SQL database interactions
-#### Testing Tools
-- [MagicMock](https://docs.python.org/3/library/unittest.mock.html) - or other mocking library
-- [Pytest](https://pytest.org) (or other testing framework)
-- [Uvicorn](https://uvicorn.org) (or other ASGI web server)
-
-## 4. Running the Project
-
-### 4.1. Start the FastAPI (Uvicorn) server:
-```uvicorn api.main:app --reload```
-
-### 4.2. Access the SwaggerUI interface:
-[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
-
-### 4.3. Use the SwaggerUI interface to interact with the API:
-- **GET**: Retrieve data from the API.
-- **POST**: Create new records in the database.
-- **PUT**: Update existing records in the database.
-- **DELETE**: Remove records from the database.
-
-### 4.4. Use the API endpoints to perform CRUD operations:
+With MySQL Server running and the SwaggerUI instantiated, your browser should have a multi-page long menu that looks like this:
 [![Group7 OROS Docs](../api/images/Group7_OROSSwaggerUIScreen1.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 [![Group7 OROS Docs](../api/images/Group7_OROSSwaggerUIScreen2.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 [![Group7 OROS Docs](../api/images/Group7_OROSSwaggerUIScreen3.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 [![Group7 OROS Docs](../api/images/Group7_OROSSwaggerUIScreen4.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+
+If not, refer to the Technical Document for troubleshooting steps which walks you thru the process of setting up the project,
+to get the SwaggerUI to work.  The Technical Document also provides a detailed overview of the project, including the technology stack used,
+the database schema, and the API endpoints.
+
+, and Before you begin, ensure you have the following installed on your (local) system:
+
+

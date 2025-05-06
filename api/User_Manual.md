@@ -56,7 +56,7 @@ Go to Orders > "Get /orders/{order_id} Get Order" option and enter the Order ID.
 Go to Orders > "Get /orders/track/{tracking_number} Track order" and enter your Tracking Number.
 #### 2.3.3: with Date
 Go to Orders > "Get /orders/date-range/ Get Orders in Range" and enter the date of your order.
-[![Group7 OROS Docs](../api/images/SwaggerUI_Orders.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS Docs](../api/images/Group7_SwaggerUI_Orders.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 
 ### 2.4. Updating Account Information
 To update account information, the customer must provide their account ID and the new information they wish to update. The API will validate the input and update the customer record in the database.

@@ -40,7 +40,7 @@ Successful Response" in the Responses section after you've clicked 'Execute' sig
 created successfully.
 [![Group7 OROS Docs](../api/images/SwaggerUI_CreateCustomerExecute.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 
-### 2.2. Validate Your Customer Account
+### 2.2. Validate/View Your Customer Account
 We'll go ahead and validate your account has been created & stored - click on the Post /customers/{customer_id} Get Customer option,
 then click 'Try It Out' and enter your Customer ID in the field (highlighted) provided.  Click 'Execute' and you should see a 
 "Code 200, Successful Response" in the Responses section.  Validate your Customer Information is as entered above.
@@ -54,12 +54,12 @@ provide your Customer ID to make updates.
 To delete your account, use the "DELETE /customers/{customer_id} Delete Customer" option.  YOu will need your Customer ID to 
 complete this action.
 
-### 2.2. Order Actions
+### 2.2. Customer: Order Actions
 #### 2.2.1 Place an Order
 To place an order, you will need to locate Menu Items > "Get /menu-items/ Get All Menu Items".  Expand the option, click
 'Try It Out' and then 'Execute' to see the list of Menu Items available for order.  Once you have identified the items you 
 want to order, you will need to then locate the Orders > "Post /orders/ Create Order" options.
-#### 2.2.2. Check Order Status
+#### 2.2.2. Check Order Status / View an Order
 YOu can check the status of your order in a few ways.
 #### 2.2.2.1: with Order ID
 Go to Orders > "Get /orders/{order_id} Get Order" option and enter the Order ID.
@@ -68,33 +68,20 @@ Go to Orders > "Get /orders/track/{tracking_number} Track order" and enter your 
 #### 2.2.2.3: with Date
 Go to Orders > "Get /orders/date-range/ Get Orders in Range" and enter the date of your order.
 [![Group7 OROS Docs](../api/images/Group7_SwaggerUI_Orders.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
-
-#### 2.2.3: Cancel an Order
+#### 2.2.3. Update/Revise an Order
+To update/revise an order, locate Orders > "PUT /orders/{order_id} Update Order" option.  You will need to provide your Order ID.
+#### 2.2.4: Cancel an Order
 To cancel an order, you will need to access the "DELETE /orders/{order_id} Delete Order" function in the Orders section.  Expand
+### 2.2.5. Browse Restaurant Menu
+To view the restaurant's menu items, locate Menu Items > "GET /menu-items/ Get All Menu Items"
 
-### 2.2.4. Browse Restaurant Menu
-To view the menu items, the customer can make a GET request to the API. The API will retrieve the menu items from the database and return them to the customer.
-
-### 2.3. Rate and Review
+### 2.3. Customer: Rate and Review
 #### 2.3.1: Rate a Menu Item
 To provide a rating for a menu item, go to the Rating Reviews section > "POST /rating-reviews/ Create Rating Review" - you will
 need your Customer ID, the Menu Item ID; then can enter your Review Text and (integer) Score.
 #### 2.3.2: Update a Rating Review provided previously
 To update a rating review, go to the Rating Reviews section > "PUT /rating-reviews/{rating_review_id} Update Rating Review" - you will
 need the Review ID (from the previous Rating); then can enter your Review Text and (integer) Score.
-
-### 2.7. Viewing Promotions
-To view the promotions, the customer can make a GET request to the API. The API will retrieve the promotions from the database and return them to the customer.
-### 2.8. Viewing Order History
-To view the order history, the customer can make a GET request to the API. The API will retrieve the order history from the database and return it to the customer.
-### 2.9. Viewing Customer Information
-To view customer information, the customer can make a GET request to the API. The API will retrieve the customer information from the database and return it to the customer.
-### 2.10. Updating Order Information
-To update order information, the customer must provide their order ID and the new information they wish to update. The API will validate the input and update the order record in the database.
-### 2.11. Deleting an Order
-To delete an order, the customer must provide their order ID. The API will validate the input and delete the order record from the database.
-### 2.12. Viewing Order Details
-To view the details of an order, the customer must provide their order ID. The API will retrieve the order details from the database and return them to the customer.
 
 ## 3. Restaurant Staff
 ### 3.1. Menu Actions

@@ -29,8 +29,9 @@ the database schema, and the API endpoints.
 #### 2.1.3: Enter the required information in the fields highlighted here.
 **Reminder, make note of your Customer ID, as you will need this to validate or make any changes to your account (2.2).
 Once you have entered the required information, click Execute.  The program will create a new customer record with the
-information you've provided and assign a new Customer ID.  A "Code 201, Successful Response" in the Responses section after
-you've clicked 'Execute' signals that your Customer Account has been created successfully.
+information you've provided and assign a new Customer ID (make note of this as you will need it again).  A "Code 201, 
+Successful Response" in the Responses section after you've clicked 'Execute' signals that your Customer Account has been 
+created successfully.
 [![Group7 OROS Docs](../api/images/SwaggerUI_CreateCustomerExecute.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 
 ### 2.2. Validate Your Customer Account
@@ -43,9 +44,20 @@ Note: if you failed to capture your Customer ID in 2.1.2, you will need to conta
 
 
 ### 2.2. Placing an Order
-To place an order, the customer must provide their account information, the menu items they wish to order, and their payment information. The API will validate the input and create a new order record in the database.
-### 2.3. Viewing Order Status
-To view the status of an order, the customer must provide their order ID. The API will retrieve the order status from the database and return it to the customer.
+To place an order, you will need to access the "Get /menu-items/ Get All Menu Items" function in the Menu Items section.  Expand
+the option, click 'Try It Out' and then 'Execute' to see the list of Menu Items available for order.  Once you have identified
+the items you want to order, you will need to then expand the "Post /orders/ Create Order" function in the Orders section.  Expand
+ovide their account information, the menu items they wish to order, and their payment information. The API will validate the input and create a new order record in the database.
+### 2.3. Check Order Status
+YOu can check the status of your order in a few ways.
+#### 2.3.1: with Order ID
+Go to Orders > "Get /orders/{order_id} Get Order" option and enter the Order ID.
+#### 2.3.2: with Tracking Number
+Go to Orders > "Get /orders/track/{tracking_number} Track order" and enter your Tracking Number.
+#### 2.3.3: with Date
+Go to Orders > "Get /orders/date-range/ Get Orders in Range" and enter the date of your order.
+[![Group7 OROS Docs](../api/images/SwaggerUI_Orders.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+
 ### 2.4. Updating Account Information
 To update account information, the customer must provide their account ID and the new information they wish to update. The API will validate the input and update the customer record in the database.
 ### 2.5. Deleting an Account

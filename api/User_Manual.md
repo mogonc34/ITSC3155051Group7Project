@@ -13,15 +13,21 @@ they are a member the Restaurant Staff or an ordering Custumer. The solution is 
 clear documentation and examples provided.
 
 ### 1.1. Prerequisites / Assumptions
-We have made some assumptions, presuming your knowledge as outlined here.  That you are:
-	- the machine you the SwaggerUI instantiated and ready for your to use (see below).
+We have made some assumptions, presuming that the SwaggerUI is running for you already.  As such, you should see a long list of
+categorized features, your web page should look like this:
+[![Group7 OROS Docs](../api/images/Group7_OROSSwaggerUIScreen2.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS Docs](../api/images/Group7_OROSSwaggerUIScreen2.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS Docs](../api/images/Group7_OROSSwaggerUIScreen3.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS Docs](../api/images/Group7_OROSSwaggerUIScreen4.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+
 If the SwaggerUI is not instantiated, you will need to refer to the Technical Document for steps to do do so, including implementing
-the MySQL server as well.  troubleshooting steps which walks you thru the process of setting up the project,
-to get the SwaggerUI to work.  The Technical Document also provides a detailed overview of the project, including the technology stack used,
-the database schema, and the API endpoints.
+the MySQL server as well.
+
+From here, the User Manual is separated into two main sections (User Perspectives): Customer and Restaurant Staff.
+Each section is further broken down into activities that can be performed by the user.
 
 ## 2. Customer
-### 2.1. Creating an Account
+### 2.1. Account Actions
 #### 2.1.1: To create an account, from the SwaggerUI menu, select Post /customers/ Create Customer to expand the option.
 [![Group7 OROS Docs](../api/images/SwaggerUI_SelectCreateCustomer.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 #### 2.1.2: Click Try It Out in the upper right (highlighted here:
@@ -41,29 +47,37 @@ then click 'Try It Out' and enter your Customer ID in the field (highlighted) pr
 [![Group7 OROS Docs](../api/images/SwaggerUI_GetCustomer.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 
 Note: if you failed to capture your Customer ID in 2.1.2, you will need to contact the restaurant staff to get your Customer ID.
+### 2.3. Update Account Information
+Use the "Put /customers/{customer_id} Update Customer" option to update your account information.  Reminder, you will need to
+provide your Customer ID to make updates.
+### 2.4. Delete Your Account
+To delete your account, use the "DELETE /customers/{customer_id} Delete Customer" option.  YOu will need your Customer ID to 
+complete this action.
 
-
-### 2.2. Placing an Order
+### 2.2. Order Actions
+#### 2.2.1 Place an Order
 To place an order, you will need to access the "Get /menu-items/ Get All Menu Items" function in the Menu Items section.  Expand
 the option, click 'Try It Out' and then 'Execute' to see the list of Menu Items available for order.  Once you have identified
 the items you want to order, you will need to then expand the "Post /orders/ Create Order" function in the Orders section.  Expand
 ovide their account information, the menu items they wish to order, and their payment information. The API will validate the input and create a new order record in the database.
-### 2.3. Check Order Status
+#### 2.2.2. Check Order Status
 YOu can check the status of your order in a few ways.
-#### 2.3.1: with Order ID
+#### 2.2.2.1: with Order ID
 Go to Orders > "Get /orders/{order_id} Get Order" option and enter the Order ID.
-#### 2.3.2: with Tracking Number
+#### 2.2.2.2: with Tracking Number
 Go to Orders > "Get /orders/track/{tracking_number} Track order" and enter your Tracking Number.
-#### 2.3.3: with Date
+#### 2.2.2.3: with Date
 Go to Orders > "Get /orders/date-range/ Get Orders in Range" and enter the date of your order.
 [![Group7 OROS Docs](../api/images/Group7_SwaggerUI_Orders.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 
-### 2.4. Updating Account Information
-To update account information, the customer must provide their account ID and the new information they wish to update. The API will validate the input and update the customer record in the database.
-### 2.5. Deleting an Account
-To delete an account, the customer must provide their account ID. The API will validate the input and delete the customer record from the database.
-### 2.6. Viewing Menu Items
+#### 2.2.3: Cancel an Order
+To cancel an order, you will need to access the "DELETE /orders/{order_id} Delete Order" function in the Orders section.  Expand
+
+### 2.2.4. Browse Restaurant Menu
 To view the menu items, the customer can make a GET request to the API. The API will retrieve the menu items from the database and return them to the customer.
+
+### 2.3. Rate and Review
+
 ### 2.7. Viewing Promotions
 To view the promotions, the customer can make a GET request to the API. The API will retrieve the promotions from the database and return them to the customer.
 ### 2.8. Viewing Order History
@@ -78,7 +92,8 @@ To delete an order, the customer must provide their order ID. The API will valid
 To view the details of an order, the customer must provide their order ID. The API will retrieve the order details from the database and return them to the customer.
 
 ## 3. Restaurant Staff
-### 3.1. Creating a Menu Item
+### 3.1. Menu Actions
+#### 3.1.1 Create a Menu Item
 To create a menu item, the restaurant staff must provide the item name, description, price, and category. The API will validate the input and create a new menu item record in the database.
 ### 3.2. Updating a Menu Item
 To update a menu item, the restaurant staff must provide the item ID and the new information they wish to update. The API will validate the input and update the menu item record in the database.
@@ -142,15 +157,7 @@ To view the ratings and reviews given by a customer for an order, the restaurant
 To view the feedback given by a customer for an order, the restaurant staff must provide the customer ID and the order ID. The API will retrieve the customer order feedback from the database and return it to the restaurant staff.
 
 
-With MySQL Server running and the SwaggerUI instantiated, your browser should have a long page menu that looks like this:
-[![Group7 OROS Docs](../api/images/Group7_OROSSwaggerUIScreen2.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
-[![Group7 OROS Docs](../api/images/Group7_OROSSwaggerUIScreen3.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
-[![Group7 OROS Docs](../api/images/Group7_OROSSwaggerUIScreen4.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
-
 If not, refer to the Technical Document for troubleshooting steps which walks you thru the process of setting up the project,
 to get the SwaggerUI to work.  The Technical Document also provides a detailed overview of the project, including the technology stack used,
 the database schema, and the API endpoints.
-
-, and Before you begin, ensure you have the following installed on your (local) system:
-
 

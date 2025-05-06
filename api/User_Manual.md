@@ -91,14 +91,25 @@ as completed.
 
 ### 3.1. Staff: Menu Actions
 #### 3.1.1 Create a Menu Item
-To create a menu item, locate Menu Items > "POST /menu-items/ Create Menu Item".  To create a Menu Item, you will need to know it's Name,
-Description, Price, Calories, and Food Category.
+To create a Menu Item, you will first need to ensure the needed ingredients are created for selection - "POST /ingredients/ Create ingredient".
+With the Ingredient ID and the known quantity needed, you can proceed to create the needed association to a Menu Item using the Menu Item 
+Ingredients > "POST /menu-items/ Create Menu Item".  With those two elements in place, you can then create the Menu Item itself using the
+"POST /menu-items/ Create Menu Item" function.  You will need to provide the following information: Name, Description, Price, Calories,
+and Food Category.
 #### 3.1.2. Update a Menu Item
-To update a menu item, locate Menu Items > "PUT /menu-items/{item_id} Update Menu Item".  You will need to provide the Menu Item ID and the new information you wish to update.
+To update a menu item, you'll need it's Menu Item ID - if you are unsure of the ID, refer to 3.1.4 to View All Menu Items to see the full list 
+of Menu Items currently available for ordering.  With the Menu Item ID(s), go to Menu Items > "PUT /menu-items/{item_id} Update Menu Item".  
+Enter the Menu Item ID, click Execute, update the information you want to change, and click Execute again.
 #### 3.1.3. Delete a Menu Item
-To delete a menu item, locate Menu Items > "DELETE /menu-items/{item_id} Delete Menu Item".
+To delete a menu item, with the Menu Item ID, locate Menu Items > "DELETE /menu-items/{item_id} Delete Menu Item", "Try It Out", provide the 
+Menu Item ID, and click Execute.
 #### 3.1.4. View All Menu Items
 To view the menu items, locate Menu Items > "GET /menu-items/ Get All Menu Items".
+#### 3.1.5. View Menu Items by Category
+You can also view all menu items by category - to do so, locate Menu Items > "GET /menu-items/category/{category} Get Menu Items by Category" and enter the
+category you want to view.  The system will return all menu items in that category.  If you are unsure of the category, you can view the available
+categories by viewing all Menu Items, 3.1.4 (above).
+
 
 ### 3.2. Staff: Promotions
 #### 3.2.1. Create a Promotion

@@ -56,10 +56,9 @@ complete this action.
 
 ### 2.2. Order Actions
 #### 2.2.1 Place an Order
-To place an order, you will need to access the "Get /menu-items/ Get All Menu Items" function in the Menu Items section.  Expand
-the option, click 'Try It Out' and then 'Execute' to see the list of Menu Items available for order.  Once you have identified
-the items you want to order, you will need to then expand the "Post /orders/ Create Order" function in the Orders section.  Expand
-ovide their account information, the menu items they wish to order, and their payment information. The API will validate the input and create a new order record in the database.
+To place an order, you will need to locate Menu Items > "Get /menu-items/ Get All Menu Items".  Expand the option, click
+'Try It Out' and then 'Execute' to see the list of Menu Items available for order.  Once you have identified the items you 
+want to order, you will need to then locate the Orders > "Post /orders/ Create Order" options.
 #### 2.2.2. Check Order Status
 YOu can check the status of your order in a few ways.
 #### 2.2.2.1: with Order ID
@@ -77,6 +76,12 @@ To cancel an order, you will need to access the "DELETE /orders/{order_id} Delet
 To view the menu items, the customer can make a GET request to the API. The API will retrieve the menu items from the database and return them to the customer.
 
 ### 2.3. Rate and Review
+#### 2.3.1: Rate a Menu Item
+To provide a rating for a menu item, go to the Rating Reviews section > "POST /rating-reviews/ Create Rating Review" - you will
+need your Customer ID, the Menu Item ID; then can enter your Review Text and (integer) Score.
+#### 2.3.2: Update a Rating Review provided previously
+To update a rating review, go to the Rating Reviews section > "PUT /rating-reviews/{rating_review_id} Update Rating Review" - you will
+need the Review ID (from the previous Rating); then can enter your Review Text and (integer) Score.
 
 ### 2.7. Viewing Promotions
 To view the promotions, the customer can make a GET request to the API. The API will retrieve the promotions from the database and return them to the customer.
@@ -95,14 +100,35 @@ To view the details of an order, the customer must provide their order ID. The A
 ### 3.1. Menu Actions
 #### 3.1.1 Create a Menu Item
 To create a menu item, the restaurant staff must provide the item name, description, price, and category. The API will validate the input and create a new menu item record in the database.
-### 3.2. Updating a Menu Item
+#### 3.1.2. Update a Menu Item
 To update a menu item, the restaurant staff must provide the item ID and the new information they wish to update. The API will validate the input and update the menu item record in the database.
-### 3.3. Deleting a Menu Item
+#### 3.1.3. Delete a Menu Item
 To delete a menu item, the restaurant staff must provide the item ID. The API will validate the input and delete the menu item record from the database.
-### 3.4. Viewing Menu Items
+#### 3.1.4. View All Menu Items
 To view the menu items, the restaurant staff can make a GET request to the API. The API will retrieve the menu items from the database and return them to the restaurant staff.
-### 3.5. Creating a Promotion
+
+### 3.2. Promotions
+#### 3.2.1. Create a Promotion
 To create a promotion, the restaurant staff must provide the promotion name, description, start date, end date, and discount percentage. The API will validate the input and create a new promotion record in the database.
+#### 3.2.2. Update a Promotion
+To update a promotion, the restaurant staff must provide the promotion ID and the new information they wish to update. The API will validate the input and update the promotion record in the database.
+#### 3.2.3. Delete a Promotion
+To delete a promotion, the restaurant staff must provide the promotion ID. The API will validate the input and delete the promotion record from the database.
+#### 3.2.4. View All Promotions
+To view the promotions, the restaurant staff can make a GET request to the API. The API will retrieve the promotions from the database and return them to the restaurant staff.
+
+### 3.3. Order Actions
+#### 3.3.1. View All Orders
+To view the orders, locate Orders > "GET /orders/ Get All Orders".
+#### 3.3.2. Review Revenue from OROS Orders (on a specific date)
+To review the revenue from OROS orders, locate Orders > "GET /orders/revenue/{target_date} Get Revenue}"
+#### 3.3.2. Update an Order
+To update an order - i.e. to update its status or tracking information - locate Orders > "PUT /orders/{order_id} Update Order"
+#### 3.3.3. Delete an Order
+To delete an order, the restaurant staff must provide the order ID. The API will validate the input and delete the order record from the database.
+#### 3.3.4. Create an Order
+To create an order, the restaurant staff must provide the customer ID, menu items, and payment information. The API will validate the input and create a new order record in the database.
+
 ### 3.6. Updating a Promotion
 To update a promotion, the restaurant staff must provide the promotion ID and the new information they wish to update. The API will validate the input and update the promotion record in the database.
 ### 3.7. Deleting a Promotion

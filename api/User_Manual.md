@@ -15,7 +15,7 @@ clear documentation and examples provided.
 ### 1.1. Prerequisites / Assumptions
 We have made some assumptions, presuming that the SwaggerUI is running for you already.  As such, you should see a long list of
 categorized features, your web page should look like this:
-[![Group7 OROS Docs](../api/images/Group7_OROSSwaggerUIScreen2.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+[![Group7 OROS Docs](../api/images/Group7_OROSSwaggerUIScreen1.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 [![Group7 OROS Docs](../api/images/Group7_OROSSwaggerUIScreen2.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 [![Group7 OROS Docs](../api/images/Group7_OROSSwaggerUIScreen3.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
 [![Group7 OROS Docs](../api/images/Group7_OROSSwaggerUIScreen4.png)](https://github.com/mogonc34/ITSC3155051Group7Project)

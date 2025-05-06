@@ -120,6 +120,9 @@ To update a promotion, the restaurant staff must provide the promotion ID and th
 To delete a promotion, locate Promotions > "DELETE /promotions/{promo_code}" - you will need the promotion ID.
 #### 3.2.4. View All Promotions
 To view existing promotions, locate Promotions > "GET /promotions/ Get All Promotions".
+Note: this is different than the Get Order Promotion function which is to be used to view promotions on an order.
+#### 3.2.5. View Promotions on an Order
+To view promotions on an order, use Order Promotions > "GET /promotions/{order_id}{promo_code} Get Order Promotion" - you will need the Order ID.
 
 ### 3.3. Staff: Order Actions
 #### 3.3.1. View All Orders
@@ -127,8 +130,6 @@ To view the orders, locate Orders > "GET /orders/ Get All Orders".
 #### 3.3.2. Review Revenue from OROS Orders (on a specific date)
 To review revenue from OROS orders for a date, locate Orders > "GET /orders/revenue/{target_date} Get Revenue}"
 #### 3.3.2. Update an Order
-To update an order - i.e. to update its status or tracking information - locate Orders > "PUT /orders/{order_id} Update Order"
+When needed, Restaurant Staff can update an order - i.e. to update its status or tracking information - by following "2.2.3: Update/Revise an Order" (above).
 #### 3.3.3. Delete an Order
-To delete an order, the restaurant staff must provide the order ID.
-#### 3.3.4. Create an Order
-To create an order, locate Orders > "POST /orders/ Create Order".
+When requested to do so by a customer, Restaurant Staff can delete (cancel) an order by following ""2.2.4: Cancel an Order" (above).

@@ -83,12 +83,15 @@ To update a rating review, go to the Rating Reviews section > "PUT /rating-revie
 need the Review ID (from the previous Rating); then can enter your Review Text and (integer) Score.
 
 ## 3. Restaurant Staff
-The mechanics for executing the below functions, are very similar to that of the Customer > Account Actions section (above) so will
-avoid the redundancy - the steps being to locate the referenced function, expand the block, click "Try It Out", update the required 
-information (right side of the colon, between the ""), click "Execute" and look for Successful Response to confirm action was completed.
+At present, Restaurant Staff/Management will use the same SwaggerUI as a Customer - future enhancements will address separation and controls
+to separate by role.  The mechanics for executing the below functions, are very similar to that of the Customer > Account Actions section (above) 
+so will avoid the redundant language here.  Those mechanics being to locate the referenced function, expand the block, click "Try It Out", 
+update the required information (right side of the colon, between the ""), click "Execute" and look for Successful Response to confirm actionw
+as completed.
+
 ### 3.1. Staff: Menu Actions
 #### 3.1.1 Create a Menu Item
-To create a menu item, locate Menu Items > "POST /menu-items/ Create Menu Item".  To create a Manu Item, you will need to know it's Name,
+To create a menu item, locate Menu Items > "POST /menu-items/ Create Menu Item".  To create a Menu Item, you will need to know it's Name,
 Description, Price, Calories, and Food Category.
 #### 3.1.2. Update a Menu Item
 To update a menu item, locate Menu Items > "PUT /menu-items/{item_id} Update Menu Item".  You will need to provide the Menu Item ID and the new information you wish to update.

@@ -2,13 +2,14 @@
 
 ## 1. Introduction - Project Overview
 
-The Online Restaurant Ordering System (OROS) is a RESTful API-based solution that provides a tool for streamlining a restaurant's
-operations and enhance the customer ordering experience while also providing a platform for restaurant owners to manage their
-menu items, orders, and promotions. The solution is built using FastAPI, MySQL, and SQLAlchemy, and is designed to be easy to use
-and understand. The API implements features for managing orders, customers, menu items, and more. This solution uses a SwaggerUI, 
-instead of a front-end UI, for User-interaction. The below User Manual is provided to help users to use the solution - whether 
-they are a member the Restaurant Staff or an ordering Custumer. The solution is designed to be easy to use and understand, with 
-clear documentation and examples provided.
+The Online Restaurant Ordering System (OROS) is a RESTful API-based solution for restaurants to expand their customer base to those
+who prefer to use an online tool for ordering.  The solution also provides restaurant ownership/management a tool for streamlining
+their improving their operations and enhance the customer ordering experience while also digitizing their menus and enabling 
+customer feedback. The API implements features for managing orders, customers, menu items, and more. This solution uses a SwaggerUI, 
+instead of a front-end UI, for User-interaction
+
+The below User Manual is provided to guide users through the features from both perspectives - whether as a member the Restaurant 
+Staff or an ordering Custumer.
 
 ### 1.1. Prerequisites / Assumptions
 We have made some assumptions, presuming that the SwaggerUI is running for you already.  As such, you should see a long list of
@@ -82,8 +83,9 @@ To update a rating review, go to the Rating Reviews section > "PUT /rating-revie
 need the Review ID (from the previous Rating); then can enter your Review Text and (integer) Score.
 
 ## 3. Restaurant Staff
-The mechanics for executing the below, are similar to the Customer > Account Actions section - to find locate the feature, expand the feature,
-select "Try It Out", update the information (right side of the colon), click "Execute" and look for Successful Response to confirm action was completed.
+The mechanics for executing the below functions, are very similar to that of the Customer > Account Actions section (above) so will
+avoid the redundancy - the steps being to locate the referenced function, expand the block, click "Try It Out", update the required 
+information (right side of the colon, between the ""), click "Execute" and look for Successful Response to confirm action was completed.
 ### 3.1. Staff: Menu Actions
 #### 3.1.1 Create a Menu Item
 To create a menu item, locate Menu Items > "POST /menu-items/ Create Menu Item".  To create a Manu Item, you will need to know it's Name,

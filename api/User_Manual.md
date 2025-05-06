@@ -1,6 +1,4 @@
-﻿Copied this from FastAPI Project - Frontend
-
-# ITSC-3155 Section-051 Group-7 Final Project User Manual
+﻿# ITSC-3155 Section-051 Group-7 Final Project User Manual
 
 ## 1. Introduction - Project Overview
 
@@ -84,93 +82,37 @@ To update a rating review, go to the Rating Reviews section > "PUT /rating-revie
 need the Review ID (from the previous Rating); then can enter your Review Text and (integer) Score.
 
 ## 3. Restaurant Staff
-### 3.1. Menu Actions
+The mechanics for executing the below, are similar to the Customer > Account Actions section - to find locate the feature, expand the feature,
+select "Try It Out", update the information (right side of the colon), click "Execute" and look for Successful Response to confirm action was completed.
+### 3.1. Staff: Menu Actions
 #### 3.1.1 Create a Menu Item
-To create a menu item, the restaurant staff must provide the item name, description, price, and category. The API will validate the input and create a new menu item record in the database.
+To create a menu item, locate Menu Items > "POST /menu-items/ Create Menu Item".  To create a Manu Item, you will need to know it's Name,
+Description, Price, Calories, and Food Category.
 #### 3.1.2. Update a Menu Item
-To update a menu item, the restaurant staff must provide the item ID and the new information they wish to update. The API will validate the input and update the menu item record in the database.
+To update a menu item, locate Menu Items > "PUT /menu-items/{item_id} Update Menu Item".  You will need to provide the Menu Item ID and the new information you wish to update.
 #### 3.1.3. Delete a Menu Item
-To delete a menu item, the restaurant staff must provide the item ID. The API will validate the input and delete the menu item record from the database.
+To delete a menu item, locate Menu Items > "DELETE /menu-items/{item_id} Delete Menu Item".
 #### 3.1.4. View All Menu Items
-To view the menu items, the restaurant staff can make a GET request to the API. The API will retrieve the menu items from the database and return them to the restaurant staff.
+To view the menu items, locate Menu Items > "GET /menu-items/ Get All Menu Items".
 
-### 3.2. Promotions
+### 3.2. Staff: Promotions
 #### 3.2.1. Create a Promotion
-To create a promotion, the restaurant staff must provide the promotion name, description, start date, end date, and discount percentage. The API will validate the input and create a new promotion record in the database.
+To create a promotion, locate Promotions > "POST /promotions/ Create Promotion".  Have the promotion name, description, start date, end date, and discount percentage.
 #### 3.2.2. Update a Promotion
 To update a promotion, the restaurant staff must provide the promotion ID and the new information they wish to update. The API will validate the input and update the promotion record in the database.
 #### 3.2.3. Delete a Promotion
-To delete a promotion, the restaurant staff must provide the promotion ID. The API will validate the input and delete the promotion record from the database.
+To delete a promotion, locate Promotions > "DELETE /promotions/{promo_code}" - you will need the promotion ID.
 #### 3.2.4. View All Promotions
-To view the promotions, the restaurant staff can make a GET request to the API. The API will retrieve the promotions from the database and return them to the restaurant staff.
+To view existing promotions, locate Promotions > "GET /promotions/ Get All Promotions".
 
-### 3.3. Order Actions
+### 3.3. Staff: Order Actions
 #### 3.3.1. View All Orders
 To view the orders, locate Orders > "GET /orders/ Get All Orders".
 #### 3.3.2. Review Revenue from OROS Orders (on a specific date)
-To review the revenue from OROS orders, locate Orders > "GET /orders/revenue/{target_date} Get Revenue}"
+To review revenue from OROS orders for a date, locate Orders > "GET /orders/revenue/{target_date} Get Revenue}"
 #### 3.3.2. Update an Order
 To update an order - i.e. to update its status or tracking information - locate Orders > "PUT /orders/{order_id} Update Order"
 #### 3.3.3. Delete an Order
-To delete an order, the restaurant staff must provide the order ID. The API will validate the input and delete the order record from the database.
+To delete an order, the restaurant staff must provide the order ID.
 #### 3.3.4. Create an Order
-To create an order, the restaurant staff must provide the customer ID, menu items, and payment information. The API will validate the input and create a new order record in the database.
-
-### 3.6. Updating a Promotion
-To update a promotion, the restaurant staff must provide the promotion ID and the new information they wish to update. The API will validate the input and update the promotion record in the database.
-### 3.7. Deleting a Promotion
-To delete a promotion, the restaurant staff must provide the promotion ID. The API will validate the input and delete the promotion record from the database.
-### 3.8. Viewing Promotions
-To view the promotions, the restaurant staff can make a GET request to the API. The API will retrieve the promotions from the database and return them to the restaurant staff.
-### 3.9. Viewing Order History
-To view the order history, the restaurant staff can make a GET request to the API. The API will retrieve the order history from the database and return it to the restaurant staff.
-### 3.10. Viewing Customer Information
-To view customer information, the restaurant staff can make a GET request to the API. The API will retrieve the customer information from the database and return it to the restaurant staff.
-### 3.11. Viewing Order Details
-To view the details of an order, the restaurant staff must provide the order ID. The API will retrieve the order details from the database and return them to the restaurant staff.
-### 3.12. Updating Order Information
-To update order information, the restaurant staff must provide the order ID and the new information they wish to update. The API will validate the input and update the order record in the database.
-### 3.13. Deleting an Order
-To delete an order, the restaurant staff must provide the order ID. The API will validate the input and delete the order record from the database.
-### 3.14. Viewing Order Status
-To view the status of an order, the restaurant staff must provide the order ID. The API will retrieve the order status from the database and return it to the restaurant staff.
-### 3.15. Viewing Customer Orders
-To view the orders of a customer, the restaurant staff must provide the customer ID. The API will retrieve the customer orders from the database and return them to the restaurant staff.
-### 3.16. Viewing Customer Ratings and Reviews
-To view the ratings and reviews of a customer, the restaurant staff must provide the customer ID. The API will retrieve the customer ratings and reviews from the database and return them to the restaurant staff.
-### 3.17. Viewing Customer Feedback
-To view the feedback of a customer, the restaurant staff must provide the customer ID. The API will retrieve the customer feedback from the database and return it to the restaurant staff.
-### 3.18. Viewing Customer Order History
-To view the order history of a customer, the restaurant staff must provide the customer ID. The API will retrieve the customer order history from the database and return it to the restaurant staff.
-### 3.19. Viewing Customer Order Details
-To view the details of a customer's order, the restaurant staff must provide the customer ID and the order ID. The API will retrieve the customer order details from the database and return them to the restaurant staff.
-### 3.20. Viewing Customer Order Status
-To view the status of a customer's order, the restaurant staff must provide the customer ID and the order ID. The API will retrieve the customer order status from the database and return it to the restaurant staff.
-### 3.21. Viewing Customer Order Promotions
-To view the promotions applied to a customer's order, the restaurant staff must provide the customer ID and the order ID. The API will retrieve the customer order promotions from the database and return them to the restaurant staff.
-### 3.22. Viewing Customer Order Payments
-To view the payments made by a customer for an order, the restaurant staff must provide the customer ID and the order ID. The API will retrieve the customer order payments from the database and return them to the restaurant staff.
-### 3.23. Viewing Customer Order Ratings and Reviews
-To view the ratings and reviews given by a customer for an order, the restaurant staff must provide the customer ID and the order ID. The API will retrieve the customer order ratings and reviews from the database and return them to the restaurant staff.
-### 3.24. Viewing Customer Order Feedback
-To view the feedback given by a customer for an order, the restaurant staff must provide the customer ID and the order ID. The API will retrieve the customer order feedback from the database and return it to the restaurant staff.
-### 3.25. Viewing Customer Order History
-To view the order history of a customer, the restaurant staff must provide the customer ID. The API will retrieve the customer order history from the database and return it to the restaurant staff.
-### 3.26. Viewing Customer Order Details
-To view the details of a customer's order, the restaurant staff must provide the customer ID and the order ID. The API will retrieve the customer order details from the database and return them to the restaurant staff.
-### 3.27. Viewing Customer Order Status
-To view the status of a customer's order, the restaurant staff must provide the customer ID and the order ID. The API will retrieve the customer order status from the database and return it to the restaurant staff.
-### 3.28. Viewing Customer Order Promotions
-To view the promotions applied to a customer's order, the restaurant staff must provide the customer ID and the order ID. The API will retrieve the customer order promotions from the database and return them to the restaurant staff.
-### 3.29. Viewing Customer Order Payments
-To view the payments made by a customer for an order, the restaurant staff must provide the customer ID and the order ID. The API will retrieve the customer order payments from the database and return them to the restaurant staff.
-### 3.30. Viewing Customer Order Ratings and Reviews
-To view the ratings and reviews given by a customer for an order, the restaurant staff must provide the customer ID and the order ID. The API will retrieve the customer order ratings and reviews from the database and return them to the restaurant staff.
-### 3.31. Viewing Customer Order Feedback
-To view the feedback given by a customer for an order, the restaurant staff must provide the customer ID and the order ID. The API will retrieve the customer order feedback from the database and return it to the restaurant staff.
-
-
-If not, refer to the Technical Document for troubleshooting steps which walks you thru the process of setting up the project,
-to get the SwaggerUI to work.  The Technical Document also provides a detailed overview of the project, including the technology stack used,
-the database schema, and the API endpoints.
-
+To create an order, locate Orders > "POST /orders/ Create Order".

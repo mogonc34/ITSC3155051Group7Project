@@ -4,7 +4,7 @@ This GitHub Repository is currently shared (Collaborators) with:
 
 	Group 7 Members:
 		Adolfo Martinex (amart268@charlotte.edu), GitHub = adolfo117144
-		David Pruitt (Dpruitt5@charlotte.edu), GitHub = ???
+		David Pruitt (Dpruitt5@charlotte.edu), GitHub = Dpruitt5
 		Jie Zhou (Zzhou9@charlotte.edu), GitHub = zhouj870, and
 		Michael Goins (mogoins@charlotte.edu), GitHub = mogonc34 (Repo originator)
 	and the ITSC-3155-051 Professor & TA's:

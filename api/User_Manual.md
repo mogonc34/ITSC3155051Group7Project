@@ -1,6 +1,26 @@
-﻿# ITSC-3155 Section-051 Group-7 Final Project User Manual
+﻿# OROS API User Manual
 
-## 1. Introduction - Project Overview
+## Online Restaurant Ordering System (OROS)
+
+### by Team JAMD (Group 7)
+
+| **Team Members**               | **GitHub Username** |
+|--------------------------------|---------------------|
+| Adolfo Martinez                | adolfo117144        |
+| David Pruitt                   | Dpruitt5            |
+| Jie Zhou                       | zhouj870            |
+| Michael Goins (Repo Originator)| mogonc34            |
+
+**Course:** ITSC-3155 Section 051  
+**Instructor:** Dr. Mohsen Dorodchi  
+**Teaching Assistants:**  
+- Hari Priya Chinnala (hchinnal@charlotte.edu)  
+- Nicole Wiktor (nwiktor@charlotte.edu)  
+- Hitakshi Shirude (hshirud1@charlotte.edu)  
+
+**Submission Date:** May 2025  
+
+---## 1. Introduction - Project Overview
 
 The Online Restaurant Ordering System (OROS) is a RESTful API-based solution for restaurants to expand their customer base to those
 who prefer to use an online tool for ordering.  The solution also provides restaurant ownership/management a tool for streamlining

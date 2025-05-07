@@ -1,6 +1,33 @@
-﻿## ITSC-3155 Section 051 Group-7 Final Project Technology Stack & Uses
+﻿# JAMD-OROS API Technical Document
+
+---
+
+## Online Restaurant Ordering System (OROS)
+
+### Team JAMD (Group 7)
+
+| **Team Members**               | **GitHub Username** |
+|--------------------------------|---------------------|
+| Adolfo Martinez                | adolfo117144        |
+| David Pruitt                   | Dpruitt5            |
+| Jie Zhou                       | zhouj870            |
+| Michael Goins                  | mogonc34            |
+
+**Course:** ITSC-3155 Section 051 Final Project  
+**Instructor:** Dr. Mohsen Dorodchi  
+**Teaching Assistants:**  
+- Hari Priya Chinnala (hchinnal@charlotte.edu)  
+- Nicole Wiktor (nwiktor@charlotte.edu)  
+- Hitakshi Shirude (hshirud1@charlotte.edu)  
+
+**Submission Date:** May 2025  
+
+---
+## Final Project Technology Stack & Uses
 
 [![Meet Group-7](../api/images/Group_bio_page.png)](https://github.com/mogonc34/ITSC3155051Group7Project)
+
+---
 
 ## 1. Project Overview
 
@@ -19,6 +46,8 @@ of database CRUD operations.
 
 This Technical Document provides guidelines for setting up, configuring, and implementing the API-based database 
 solution with User API-interactive CRUD operations executed using [Uvicorn](https://uvicorn.org) in conjunction with [SwaggerUI](https://swagger.io/tools/swagger-ui/).
+
+---
 
 ### 1.1. Prerequisites / Assumptions
 We have made some assumptions, presuming your knowledge as outlined here.  That you are:
